@@ -1,4 +1,68 @@
 <!DOCTYPE html>
+<Title>Gardens By the Bay</Title>
+<meta name="author" content="Fun Gao Wei,Farrell" />
+<meta name="description" content="FED_Assignment_S10222081" />
+<meta charset="utf-8">
 <body>
-    <h1>This is Farrell :3</h1>
+<h1>Gardens by the Bay</h1>
+<div class="description">
+    <h3>Gardens by the bay officially opened on the 29th of June in 2012</h3>
+    <br>
+    <p>The Flower Dome, listed as the largest greenhouse in the world in Guinness Book of Records at 1.2 hectares (12000 square meters)</p>
+    <br>
+    <p>The iconic Supertree Grove are the 18 tree-like structures which reach heights from 25 to 50 meters. Apart from its pretty looks, it also serves as the critical role of being the garden’s environmental engines, which includes photovolatic cells to harness energy from the sun, the collection of rainwater for irrigation and fountain displays, they also support air intake and exhaust for the conservatories’ cooling systems.</p>
+</div>
+
+<div class="form">
+    <form>
+        <fieldset>
+            <legend>Customer Contact Details</legend>
+            <label for="customer_name" class="customer_name">Name:</label>
+            <input id="customer_name" type="text" placeholder="Enter Your Name" required>
+            <br>
+            <label for="customer_email" class="customer_email">Email:</label>
+            <input id="customer_email" type="email" placeholder="Enter Your Email" required>
+            <br>
+            <label for="customer_contact_no" class="customer_contact_no">Contact Number:</label>
+            <input id="customer_contact_no" type="text" placeholder="Enter Your Contact Number" required>
+            <br>
+            <label for="customer_street_no" class="customer_street_no">Street Number:</label>
+            <input id="customer_street_no" type="text" placeholder="Enter Your Street Number" required>
+            <label for="customer_street_name" class="customer_street_name">Street Name:</label>
+            <input id="customer_street_name" type="text" placeholder="Enter Your Street Name" required>
+            <label for="customer_unit_no" class="customer_unit_no">Unit Number:</label>
+            <input id="customer_unit_no" type="text" placeholder="Enter Your Unit Number" required>
+            <label for="customer_postal_code" class="customer_postal_code">Postal Code:</label>
+            <input id="customer_postal_code" type="text" placeholder="Enter Your Postal Code" required>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Booking Details</legend>
+            <label for="book-date" class="book-date">Booking Date (Up to 1 month in advance):</label>
+            <input id="book-date" type="date" name="date" required>
+            <br>
+            <label for="book-ticket" class="book-ticket">Ticket type:</label>
+            <select id="book-ticket">
+                <option disabled selected>Please Select a Ticket</option>
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+                <option>Option 4</option>
+                <option>Option 5</option>
+                <option>Option 6</option>
+                <option>Option 7</option>
+            </select>
+            <br>
+            <label for="book-adults" class="book-adults">Number of Adult Tickets (Up to 5, Minimum of 1):</label>
+            <input id="book-adults" type="number" value="1" min="1" max="5" required>
+            <br>
+            <label for="book-children" class="book-children">Number of Children Tickets (Up to 5):</label>
+            <input id="book-children" type="number" value="0" min="0" max="5" required>
+        </fieldset>
+        <input type="submit" class="submit-button">
+        <input type="reset" class="reset-button">
+    </form>
+
+</div>>
+
 </body>
