@@ -1,14 +1,20 @@
+import { create, cssomSheet } from "https://cdn.skypack.dev/twind"
+
+const sheet = cssomSheet({ target: new CSSStyleSheet() })
+const { tw } = create({ sheet })
+
 export class Page extends HTMLElement {
     constructor() {
         super()
-    }
 
-    connectedCallback() {
-        const shadowRoot = this.attachShadow({mode: "closed"})
-        shadowRoot.appendChild(`
-        <navbar>
-        Fancy Attractions
-        </navbar>
-        `)
+        const shadow = this.attachShadow({mode: "open"})
+        shadow.adoptedStyleSheets = [sheet.target]
+
+        shadow.innerHTML = `
+            <header class="${tw`p-3`}">
+                This is a shared header!
+            </header>
+            <slot></slot>
+        `
     }
 }
