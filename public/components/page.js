@@ -1,4 +1,8 @@
-import { create, cssomSheet } from "https://cdn.skypack.dev/twind"
+import { create, cssomSheet, setup } from "https://cdn.skypack.dev/twind"
+
+setup({
+    preflight: false,
+})
 
 const sheet = cssomSheet({ target: new CSSStyleSheet() })
 const { tw } = create({ sheet })
