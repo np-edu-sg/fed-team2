@@ -24,37 +24,45 @@
             fountain displays, they also support air intake and exhaust for the conservatories’ cooling systems.</p>
     </div>
 
-    <div class="form">
+    <div class="form border-2 p-3 mx-2 rounded-lg border-purple-400 border-solid">
         <form>
-            <fieldset>
+            <fieldset class="form border-2  p-5 rounded-lg border-fuchsia-500">
                 <legend>Customer Contact Details</legend>
-                <label for="customer_name" class="customer_name">Name:</label>
-                <input id="customer_name" type="text" placeholder="Enter Your Name" required>
+                <label for="customer_name" class="customer_name inline-block w-32">Name:</label>
+                <input id="customer_name" type="text" placeholder="Enter Your Name" class="border border-black mb-3"
+                       required>
                 <br>
-                <label for="customer_email" class="customer_email">Email:</label>
-                <input id="customer_email" type="email" placeholder="Enter Your Email" required>
+                <label for="customer_email" class="customer_email inline-block w-32">Email:</label>
+                <input id="customer_email" type="email" placeholder="Enter Your Email" class="border border-black mb-3"
+                       required>
                 <br>
-                <label for="customer_contact_no" class="customer_contact_no">Contact Number:</label>
-                <input id="customer_contact_no" type="text" placeholder="Enter Your Contact Number" required>
+                <label for="customer_contact_no" class="customer_contact_no inline-block w-32">Contact Number:</label>
+                <input id="customer_contact_no" type="text" placeholder="Enter Your Contact Number"
+                       class="border border-black mb-3" required>
                 <br>
-                <label for="customer_street_no" class="customer_street_no">Street Number:</label>
-                <input id="customer_street_no" type="text" placeholder="Enter Your Street Number" required>
-                <label for="customer_street_name" class="customer_street_name">Street Name:</label>
-                <input id="customer_street_name" type="text" placeholder="Enter Your Street Name" required>
-                <label for="customer_unit_no" class="customer_unit_no">Unit Number:</label>
-                <input id="customer_unit_no" type="text" placeholder="Enter Your Unit Number" required>
-                <label for="customer_postal_code" class="customer_postal_code">Postal Code:</label>
-                <input id="customer_postal_code" type="text" placeholder="Enter Your Postal Code" required>
+                <label for="customer_street_no" class="customer_street_no inline-block w-32">Street Number:</label>
+                <input id="customer_street_no" type="text" placeholder="Enter Your Street Number"
+                       class="border border-black mb-3" required>
+                <label for="customer_street_name" class="customer_street_name inline-block w-24">Street Name:</label>
+                <input id="customer_street_name" type="text" placeholder="Enter Your Street Name"
+                       class="border border-black mb-3" required>
+                <br>
+                <label for="customer_unit_no" class="customer_unit_no inline-block w-32">Unit Number:</label>
+                <input id="customer_unit_no" type="text" placeholder="Enter Your Unit Number"
+                       class="border border-black mb-3" required>
+                <label for="customer_postal_code" class="customer_postal_code inline-block w-24">Postal Code:</label>
+                <input id="customer_postal_code" type="text" placeholder="Enter Your Postal Code"
+                       class=" border border-black mb-3" required>
             </fieldset>
             <br>
-            <fieldset>
+            <fieldset class="form border-2  p-5 rounded-lg border-fuchsia-500">
                 <legend>Booking Details</legend>
-                <label for="book-date" class="book-date">Booking Date (Up to 1 month in advance):</label>
-                <input id="book-date" type="date" name="date" required>
+                <label for="book-date" class="book-date inline-block w-3/12">Booking Date (Up to 1 month in advance):</label>
+                <input id="book-date" type="date" name="date" class="border border-black mb-3 inline-block" required>
                 <br>
-                <label for="book-ticket" class="book-ticket">Ticket type (Valid until 23:59 of the booking
+                <label for="book-ticket" class="book-ticket inline-block w-3/12">Ticket type (Valid until 23:59 of the booking
                     date):</label>
-                <select id="book-ticket">
+                <select id="book-ticket" class="border border-black mb-3">
                     <option disabled selected>Please Select a Ticket</option>
                     <option>Option 1</option>
                     <option>Option 2</option>
@@ -65,14 +73,17 @@
                     <option>Option 7</option>
                 </select>
                 <br>
-                <label for="book-adults" class="book-adults">Number of Adult Tickets (Up to 5, Minimum of 1):</label>
-                <input id="book-adults" type="number" value="1" min="1" max="5" required>
+                <label for="book-adults" class="book-adults inline-block w-3/12">Number of Adult Tickets (Up to 5, Minimum of 1):</label>
+                <input id="book-adults" type="number" value="1" min="1" max="5" class="border border-black mb-3"
+                       required>
                 <br>
-                <label for="book-children" class="book-children">Number of Children Tickets (Up to 5):</label>
-                <input id="book-children" type="number" value="0" min="0" max="5" required>
+                <label for="book-children" class="book-children inline-block w-3/12">Number of Children Tickets (Up to 5):</label>
+                <input id="book-children" type="number" value="0" min="0" max="5" class="border border-black mb-3"
+                       required>
             </fieldset>
-            <input type="submit" class="submit-button">
-            <input type="reset" class="reset-button">
+            <br>
+            <input type="submit" class="submit-button form px-1 border-2 border-neutral-900 border-solid bg-slate-200">
+            <input type="reset" class="reset-button form px-1 border-2 border-neutral-900 border-solid bg-slate-200">
         </form>
 
     </div>
