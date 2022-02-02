@@ -14,7 +14,8 @@ export const Header = {
         href: () => {
             const h = window.location.href;
             if (h.indexOf("https://ngeeannpoly.gitlab.io") > -1) return "https://ngeeannpoly.gitlab.io/fed/team2"
-            else if (h.indexOf("/Assignment/public") > -1) return "/Assignment/public"
+            // Hacky, oh no
+            else if (h.indexOf("/public") > -1) return h.split("/public")[0] + "/public"
             return "/"
         }
     }
