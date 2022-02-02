@@ -55,7 +55,47 @@ body {
     position: relative;
     width: 26px;
     height: 20px;
-    background: url(/images/menutoggle.png);
+    background: url('../images/menutoggle.png');
     background-size: cover;
     cursor: pointer;
+}
+
+/*about the museum*/
+.about {
+    position: relative;
+    width:100%;
+    display: flex;
+}
+
+.about .heading {
+    font-size: 25px;
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.about .contentBx{
+    background: #9bbbc3; /*change later*/
+    padding: 60px;
+    width: 50%;
+}
+
+.abouttext {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.about .textBx {
+    background: #549db0; /*change later*/
+    width: 50%;
+    padding: 60px;
+    width: 50%;
+}
+
+.heading {
+    color: white;
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
