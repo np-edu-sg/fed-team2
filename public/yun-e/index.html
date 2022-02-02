@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <head>
-    <meta name="author" content="Tan Yun-E" />
-    <meta name="description" content="FED_Assignment_S10223135" />
+    <meta name="author" content="Tan Yun-E"/>
+    <meta name="description" content="FED_Assignment_S10223135"/>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="module" src="../vue/index.js"></script>
     <title>ArtScience Museum</title>
     <script>
         function fadeImage(I) {
             var Image = '#' + I; //String concatenation
             $(Image).fadeIn();
-            $(Image).fadeOut(3000, function () { fadeImage((I == 1) ? 5 : I - 1); });
+            $(Image).fadeOut(3000, function () {
+                fadeImage((I == 1) ? 5 : I - 1);
+            });
         }
     </script>
     <script type="module" src="../components/index.js"></script>
 </head>
 <body>
-    <!--banner-->
-    <section class="banner">
-        <header>
-            <div class="toggle"></div>
-        </header>
-        <img src="images/artsciencemuseum.jpg" id="bg" />
-        <h1 id="text">Singapore ArtScience Museum</h1>
+<div id="header"></div>
+<!--banner-->
+<section class="banner">
+    <header>
         <div class="toggle"></div>
-    </section>
-    <script type="text/javascript">
-        let bg = document.getElementById("bg");
-        window.addEventListener('scroll', function () {
-            var value = window.scrollY;
-            let fade = 1 + window.scrollY / -600;
-            bg.style.top = value * 0.5 + 'px'
-            text.style.top = value * 0.15 + 'px'
-            bg.style.opacity = fade
-        })
-    </script>
+    </header>
+    <img src="images/artsciencemuseum.jpg" id="bg"/>
+    <h1 id="text">Singapore ArtScience Museum</h1>
+    <div class="toggle"></div>
+</section>
+<script type="text/javascript">
+    let bg = document.getElementById("bg");
+    window.addEventListener('scroll', function () {
+        var value = window.scrollY;
+        let fade = 1 + window.scrollY / -600;
+        bg.style.top = value * 0.5 + 'px'
+        text.style.top = value * 0.15 + 'px'
+        bg.style.opacity = fade
+    })
+</script>
 
-    <!--About-->
-    <!--Ongoing events-->
-    <!--Testimonials-->
-    <!--Ticket prices-->
+<!--About-->
+<!--Ongoing events-->
+<!--Testimonials-->
+<!--Ticket prices-->
 </body>
