@@ -5,11 +5,11 @@ tailwind.config = {
     darkMode: 'class',
 }
 
-import {Button} from "./button.js";
-import {Header} from "./header.js";
-import {Card} from "./card.js";
+import {Button} from "./components/button.js";
+import {Header} from "./components/header.js";
+import {Card} from "./components/card.js";
 
-import {Landing} from "./landing.js";
+import {Landing} from "./pages/landing.js";
 
 const app = (i) => createApp(i).component("v-header", Header).component("v-button", Button).component('v-card', Card)
 
