@@ -4,7 +4,8 @@ import {Button} from "./button.js";
 const items = [
     {
         title: "Resorts World Sentosa",
-        href: "qin-guan"
+        href: "qin-guan",
+        img: "qin-guan/images/globe.jpg"
     },
     {
         title: "Gardens by the Bay",
@@ -26,16 +27,18 @@ const items = [
 
 export const Landing = {
     template: `
-        <div class="w-screen h-screen bg-slate-50 px-3 sm:p-0">
+        <div class="w-screen h-screen bg-slate-50 px-3 sm:p-0 overflow-y-scroll">
             <v-header title="Assignment"></v-header>
-            <div class="container mx-auto">
+            <div class="container mx-auto h-full">
                 <div v-for="item in items" class="w-full py-10 flex-1 flex-col">
-                    <div class="mb-3">
-                        <span class="text-3xl">
-                            {{ item.title }}
-                        </span>
-                    </div>
-                    <v-button text="Learn more" :href="item.href"></v-button>
+                    <v-card 
+                        :src="item.img" 
+                        alt="Your image here" 
+                        description="Your description here"
+                        :title="item.title" 
+                        :href="item.href"
+                    >
+                    </v-card>
                 </div>
             </div>
         </div>
