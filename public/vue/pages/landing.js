@@ -9,7 +9,8 @@ const items = [
     },
     {
         title: "Gardens by the Bay",
-        href: "farrell"
+        href: "farrell",
+        img: "farrell/images/farrell.jpeg"
     },
     {
         title: "Marina Bay Sands",
@@ -29,17 +30,19 @@ export const Landing = {
     template: `
         <div class="w-screen h-screen bg-slate-50 px-3 sm:p-0 overflow-y-scroll">
             <v-header title="Assignment"></v-header>
-            <div class="container mx-auto h-full">
-                <div v-for="item in items" class="w-full py-10 flex-1 flex-col">
+            <div class="container mx-auto pt-6">
+                <h1 class="text-4xl">Attractions</h1>
+                <div class="pt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     <v-card 
+                        v-for="item in items"
                         :src="item.img" 
                         alt="Your image here" 
                         description="Your description here"
                         :title="item.title" 
                         :href="item.href"
-                    >
-                    </v-card>
-                </div>
+                    />
+                </div> 
+                <h1 class="text-4xl"></h1>
             </div>
         </div>
     `,
