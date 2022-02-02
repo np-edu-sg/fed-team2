@@ -1,5 +1,5 @@
-import {Header} from "./header.js";
-import {Button} from "./button.js";
+import {Header} from "../components/header.js";
+import {Button} from "../components/button.js";
 
 const items = [
     {
