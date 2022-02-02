@@ -10,6 +10,7 @@ import {Header} from "./components/header.js";
 import {Card} from "./components/card.js";
 
 import {Landing} from "./pages/landing.js";
+import {QinGuan} from "./pages/qin-guan.js";
 
 const app = (i) => createApp(i).component("v-header", Header).component("v-button", Button).component('v-card', Card)
 
@@ -21,4 +22,9 @@ if (header) {
 const landing = document.getElementById("landing")
 if (landing) {
     app(Landing).mount("#landing")
+}
+
+const qinguan = document.getElementById("qin-guan")
+if (qinguan) {
+    app(QinGuan).mount("#qin-guan")
 }
