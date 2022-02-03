@@ -1,7 +1,3 @@
-//Function to limit the booking date to be within one month of the current date
-
-
-
 window.onload = function () {
     let currentdate = new Date();
     let futuredate = new Date();
@@ -16,10 +12,15 @@ window.onload = function () {
     input.setAttribute("max", futuredate);
 }
 
+
+
+
+
 function showFinalMessage() {
     let name = document.getElementById("customer_name").value
     let email = document.getElementById("customer_email").value
     document.getElementById("submission").innerText = "Thank you for your order, " + name + ". We will send you the ticket codes to your email at " + email
+    return false;
 }
 
 
