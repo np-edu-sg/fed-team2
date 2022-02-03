@@ -1,32 +1,3 @@
-const items = [
-    {
-        title: "Resorts World Sentosa",
-        href: "qin-guan",
-        img: "qin-guan/images/globe.jpg"
-    },
-    {
-        title: "Gardens by the Bay",
-        href: "farrell",
-        img: "farrell/images/farrell.jpeg"
-    },
-    {
-        title: "Marina Bay Sands",
-        href: "ryan"
-    },
-    {
-        title: "Art Science Museum",
-        href: "yun-e"
-    },
-    {
-        title: "Wild Wild Wet",
-        href: "richard"
-    },
-    {
-        title: "Credits",
-        href: "credits.html"
-    }
-]
-
 export const Footer = {
     template: `
         <footer class="p-4 rounded-tl-lg rounded-tr-lg shadow md:flex md:items-center md:justify-end md:p-6 bg-gray-800">
@@ -37,5 +8,42 @@ export const Footer = {
             </ul>
         </footer>
     `,
-    computed: {items: () => items}
+    computed: {
+        items: () => {
+            let prefix = "/"
+            const h = window.location.href;
+            if (h.indexOf("https://ngeeannpoly.gitlab.io") > -1) {
+                prefix = "https://ngeeannpoly.gitlab.io/fed/team2"
+            } else if (h.indexOf("/public") > -1) {
+                prefix = h.split("/public")[0] + "/public"
+            }
+
+            return [
+                {
+                    title: "Resorts World Sentosa",
+                    href: prefix + "/qin-guan",
+                },
+                {
+                    title: "Gardens by the Bay",
+                    href: prefix + "/farrell",
+                },
+                {
+                    title: "Marina Bay Sands",
+                    href: prefix + "/ryan"
+                },
+                {
+                    title: "Art Science Museum",
+                    href: prefix + "/yun-e"
+                },
+                {
+                    title: "Wild Wild Wet",
+                    href: prefix + "/richard"
+                },
+                {
+                    title: "Credits",
+                    href: prefix + "/credits.html"
+                }
+            ]
+        }
+    }
 }
