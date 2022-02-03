@@ -4,16 +4,23 @@
 }
 
 .heading {
-    border-top: thin solid black;
     padding: 10px;
     border-bottom: thin dashed grey;
 }
 
-h1{
+h1 {
     text-align: center;
     margin: auto;
     font-weight: bold;
     padding-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Slab', serif;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    margin: auto;
 }
 
 .headingtext {
@@ -95,11 +102,12 @@ p.back {
 
 .col-md-6.shop {
     text-align: left;
+    margin: auto;
 }
 
 .col-md-6.shop-things {
     text-align: right;
-    margin: 0;
+    margin: auto;
     padding-right: 30px;
 }
 
@@ -140,6 +148,7 @@ p.back {
 .col-md-6.gardens-things {
     text-align: left;
     padding-left: 30px;
+    margin: auto;
 }
 
 .col-md-6.gardens cite {
@@ -152,16 +161,3 @@ p.back {
     height: 500px;
 }
 
-/*Form details*/
-
-form {
-    border: solid black 2px;
-    border-radius: 10px;
-    width: 60%;
-    margin: auto;
-}
-
-footer {
-    padding: 10px;
-    font-weight: bold;
-}
