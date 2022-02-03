@@ -3,6 +3,12 @@ import "./tailwind.js"
 
 tailwind.config = {
     darkMode: 'class',
+    theme: {
+        fontFamily: {
+            'display': ['Poppins'],
+            'body': ['IBM Plex Sans']
+        }
+    }
 }
 
 import {Button} from "./components/button.js";
