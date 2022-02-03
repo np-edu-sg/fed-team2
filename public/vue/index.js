@@ -7,16 +7,22 @@ tailwind.config = {
 
 import {Button} from "./components/button.js";
 import {Header} from "./components/header.js";
+import {Footer} from "./components/footer.js";
 import {Card} from "./components/card.js";
 
 import {Landing} from "./pages/landing.js";
 import {QinGuan} from "./pages/qin-guan.js";
 
-const app = (i) => createApp(i).component("v-header", Header).component("v-button", Button).component('v-card', Card)
+const app = (i) => createApp(i).component("v-header", Header).component("v-footer", Footer).component("v-button", Button).component('v-card', Card)
 
 const header = document.getElementById("header")
 if (header) {
     app(Header).mount("#header")
+}
+
+const footer = document.getElementById("footer")
+if (footer) {
+    app(Footer).mount("#footer")
 }
 
 const landing = document.getElementById("landing")

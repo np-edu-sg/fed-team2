@@ -28,9 +28,9 @@ const items = [
 
 export const Landing = {
     template: `
-        <div class="w-screen h-screen bg-slate-50 sm:p-0 overflow-y-scroll">
-            <v-header title="Assignment"></v-header>
-            <div class="container mx-auto pt-6 px-3">
+        <div class="w-screen h-screen bg-slate-50 sm:p-0 flex flex-col">
+            <v-header></v-header>
+            <div class="container mx-auto pt-6 px-3 pb-6 flex-1">
                 <h1 class="text-4xl">Attractions</h1>
                 <div class="pt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     <v-card 
@@ -42,10 +42,10 @@ export const Landing = {
                         :href="item.href"
                     />
                 </div> 
-                <h1 class="text-4xl"></h1>
             </div>
+            <v-footer></v-footer>
         </div>
     `,
     components: [Header, Button],
-    data: () => ({items})
+    computed: {items: () => items}
 }

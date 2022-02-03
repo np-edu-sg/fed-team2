@@ -1,6 +1,6 @@
 export const Header = {
     template: `
-        <div class="bg-slate-200 fixed top-0 px-3 h-14 w-screen flex items-center">
+        <div class="bg-slate-200 fixed top-0 px-3 h-14 w-screen flex items-center rounded-bl-lg rounded-br-lg">
             <div class="container mx-auto">
                 <a :href="href">
                     <span class="text-lg font-bold">{{ title ?? "Assignment" }}</span>
