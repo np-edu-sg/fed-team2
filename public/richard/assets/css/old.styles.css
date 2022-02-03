@@ -13,6 +13,9 @@ body {
   justify-content: center;
   align-items: center;
 }
+.header {
+  align-items: baseline;
+}
 
 .starter1 {
   position: absolute;
