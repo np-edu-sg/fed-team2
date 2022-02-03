@@ -4,18 +4,22 @@ export const QinGuan = {
     template: `
         <div class="flex flex-col w-screen h-screen">
             <v-header/>
-            <div class="flex flex-col flex-1 m-3 md:m-10">
+            <div class="flex flex-col flex-1 p-3 md:pt-10 md:px-20 lg:px-32 xl:px-52">
                 <div class="flex flex-col justify-center items-center p-10 w-full h-96 bg-center bg-cover rounded-xl shadow-md bg-blend-darken sm:items-start bg-slate-600/75" style="background-image: url('images/rws.jpg')">
-                    <h1 class="text-5xl font-bold leading-normal text-center text-slate-200 sm:text-left">Resorts World<br/>Sentosa</h1>
-                    <button type="button" class="mt-3 text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Book now</button>
+                    <h1 class="text-5xl font-bold leading-normal text-center text-slate-200 sm:text-left font-display">Resorts World<br/>Sentosa</h1>
+                    <button type="button" class="mt-3 text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 font-body">Book now</button>
                 </div>
                 
                 <div class="grid grid-cols-1 gap-3 mt-8 md:grid-cols-3">
                     <div>
-                        <h2 class="text-3xl font-medium text-amber-700">Universal Studios Singapore</h2>
-                        <p class="mt-2 text-lg">Southeast Asia’s first and only Universal Studios theme park, featuring 24 rides, shows and attractions in seven themed zones.</p>
+                        <h2 class="text-3xl font-medium font-semibold text-amber-700 font-display">
+                            Universal Studios Singapore
+                        </h2>
+                        <p class="mt-2 text-lg font-body">
+                            Southeast Asia’s first and only Universal Studios theme park, featuring 24 rides, shows and attractions in seven themed zones.
+                        </p>
                     </div>
-                    <img class="col-span-2 rounded-lg shadow-lg" src="images/globe.jpg"/>
+                    <div class="w-full h-64 bg-center bg-cover rounded-lg shadow-lg md:col-span-2 md:h-80" style="background-image: url('images/globe.jpg')" />
                 </div>
                 
 <!--                <div class="flex justify-between">-->
