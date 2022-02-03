@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/styles.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="module" src="../vue/index.js"></script>
+    <script src="js/ArtScienceMuseum.js"></script>
     <title>ArtScience Museum</title>
     <script>
         function fadeImage(I) {
@@ -16,10 +17,10 @@
             });
         }
     </script>
-    <script type="module" src="../components/index.js"></script>
 </head>
 <body>
 <div id="header"></div>
+
 <!--banner-->
 <section class="banner">
     <header>
@@ -41,8 +42,160 @@
 </script>
 
 <!--About-->
+<section class="about">
+    <div class="contentBx">
+        <h2 class="heading">About the ArtScience Museum</h2>
+        <p class="abouttext">
+            Opened on 17 February 2011 by Prime Minister Lee Hsien Loong, it is the world's first ArtScience museum,
+            featuring major exhibitions that blend art, science, culture and technology. is an iconic cultural landmark
+            in Singapore.
+            <br/><br/>Our mission is to explore where art, science, culture and technology come together.
+            It is here at the intersection of art and science that innovation and new ideas are formed.
+        </p>
+    </div>
+    <div class="textBx">
+        <p class="abouttext">
+            The ArtScience Museum has 21 gallery spaces with a total area of 64,583 square feet (6,000 square meters).
+            <br/><br/>
+            It has held large-scale exhibitions by some of the world's best known artists including Leonardo da Vinci,
+            Salvador Dali, Andy Warhol, Vincent van Gogh and M.C. Escher. It has also presented significant exhbitions
+            that explore aspects of
+            science including big data, particle physics, paleontology, marine biology, cosmology and space exploration.
+        </p>
+    </div>
+</section>
 <!--Ongoing events-->
+
+<section class="events">
+    <div>
+        <!--<img id="FutureWorld" src="images/FutureWorld.jpg" alt="Future World" />
+        <img id="RadicalCuriosity" src="images/RadicalCuriosity.jpg" alt="RadicalCuriosity" />
+        <img id="HopeFromChaos" src="images/HopeFromChaos.jpg" alt="Hope From Chaos" />
+        <img id="AOT" src="images/AOT.jpg" alt="AOT" />-->
+    </div>
+    <div class="grid grid-col-1">
+        <div class="col-1">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="images/FutureWorld.jpg" alt="Future World" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="images/RadicalCuriosity.jpg" alt="RadicalCuriosity" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="images/HopeFromChaos.jpg" alt="Hope From Chaos" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="images/AOT.jpg" alt="AOT" style="width:100%">
+                </div>
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                </div>
+            </div>
+            <script>
+                var slideIndex = 0;
+                var dots = document.getElementsByClassName("dot");
+                showSlides();
+
+                function showSlides() {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slideIndex++;
+                    if (slideIndex > slides.length) {
+                        slideIndex = 1
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                    setTimeout(showSlides, 7000);
+                }
+            </script>
+        </div>
+        <div class="col-2">
+            <h2 class="text-4xl heading">Ongoing Events</h2>
+            <div class="slideshow-container">
+                <div class="mySlidest fade">
+                    <p class="subtitle">Future World: Where Art Meets Science</p>
+                    <p class="description">Immerse yourself in a world of art, science, magic and metaphor through a 
+                        collection of digital interactive installation.</p>
+                </div>
+                <div class="mySlidest fade">
+                    <p class="subtitle">Radical Curiosity: In the Orbit of Buckminster Fuller</p>
+                    <p class="description">Journey through the universe of inventor and visionary, Buckminster Fuller 
+                        who worked across multiple disciplines including art, science, architecture and design.</p>
+                </div>
+                <div class="mySlidest fade">
+                    <p class="subtitle">Hope from Chaos: Pandemic Reflections</p>
+                    <p class="description">Hope from Chaos marks the second anniversary of the arrival of the COVID-19 
+                        virus into Singapore. Discover the science of infectious diseases and reflect on life 
+                        during a global pandemic.</p>
+                </div>
+                <div class="mySlidest fade">
+                    <p class="subtitle">Attack On Titan: The Exhibition</p>
+                    <p class="description">Featuring over 180 artworks based on the best-selling dark fantasy manga and 
+                        anime series written and illustrated by Hajime Isayama, be introduced to a world where the last 
+                        humans are hiding behind walls to fight against mindless gigantic humanoids.</p>
+                </div>
+            </div>
+            <script>
+                var textIndex = 0;
+                showText();
+
+                function showText() {
+                    var y;
+                    var text = document.getElementsByClassName("mySlidest");
+                    for (y = 0; y < text.length; y++) {
+                        text[y].style.display = "none";
+                    }
+                    textIndex++;
+                    if (textIndex > text.length) {
+                        textIndex = 1
+                    }
+                    text[textIndex - 1].style.display = "block";
+                    setTimeout(showText, 7000);
+                }
+            </script>
+        </div>
+    </div>
+
+</section>
+
 <!--Testimonials-->
 <!--Ticket prices-->
+<section class="tickets">
+    <table>
+        <tr>
+            <th></th>
+            <td>Adult</td>
+            <td>Concession</td>
+            <td>Family (2 Adults & 2 Children)</td>
+            <td>too many</td>
+            <td>categories</td>
+        </tr>
+        <tr>
+            <th>text</th>
+            <td>price</td>
+            <td>price</td>
+            <td>price</td>
+            <td>price</td>
+            <td>price</td>
+        </tr>
+    </table>
+
+</section>
+
 <div id="footer"></div>
+
 </body>
