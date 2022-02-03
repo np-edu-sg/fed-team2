@@ -21,6 +21,10 @@ const items = [
         title: "Wild Wild Wet",
         href: "richard"
     },
+    {
+        title: "Credits",
+        href: "credits.html"
+    }
 ]
 
 export const Footer = {

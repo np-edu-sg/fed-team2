@@ -1,4 +1,4 @@
-import {createApp} from "https://unpkg.com/vue@3.2.29/dist/vue.esm-browser.js"
+import {createApp} from "https://unpkg.com/vue@3.2.29/dist/vue.esm-browser.prod.js"
 import "./tailwind.js"
 
 tailwind.config = {
@@ -12,6 +12,7 @@ import {Card} from "./components/card.js";
 
 import {Landing} from "./pages/landing.js";
 import {QinGuan} from "./pages/qin-guan.js";
+import {Credits} from "./pages/credits.js";
 
 const app = (i) => createApp(i).component("v-header", Header).component("v-footer", Footer).component("v-button", Button).component('v-card', Card)
 
@@ -28,6 +29,11 @@ if (footer) {
 const landing = document.getElementById("landing")
 if (landing) {
     app(Landing).mount("#landing")
+}
+
+const credits = document.getElementById("credits")
+if (credits) {
+    app(Credits).mount("#credits")
 }
 
 const qinguan = document.getElementById("qin-guan")
