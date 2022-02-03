@@ -28,20 +28,20 @@ const items = [
 
 export const Landing = {
     template: `
-        <div class="w-screen h-screen bg-slate-50 sm:p-0 flex flex-col">
+        <div class="flex flex-col w-screen h-screen bg-slate-50">
             <v-header></v-header>
-            <div class="container mx-auto pt-6 px-3 pb-6 flex-1">
+            <div class="container flex-1 px-3 pt-6 pb-6 mx-auto">
                 <h1 class="text-4xl">Attractions</h1>
-                <div class="pt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    <v-card 
-                        v-for="item in items"
-                        :src="item.img" 
-                        alt="Your image here" 
-                        description="Your description here"
-                        :title="item.title" 
-                        :href="item.href"
-                    />
-                </div> 
+<!--                <div class="grid grid-cols-1 gap-6 pt-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">-->
+<!--                    <v-card -->
+<!--                        v-for="item in items"-->
+<!--                        :src="item.img" -->
+<!--                        alt="Your image here" -->
+<!--                        description="Your description here"-->
+<!--                        :title="item.title" -->
+<!--                        :href="item.href"-->
+<!--                    />-->
+<!--                </div> -->
             </div>
             <v-footer></v-footer>
         </div>

@@ -2,20 +2,20 @@ import "https://unpkg.com/flowbite@1.3.2/dist/datepicker.js"
 
 export const QinGuan = {
     template: `
-        <div class="w-screen h-screen flex flex-col">
+        <div class="flex flex-col w-screen h-screen">
             <v-header/>
-            <div class="flex-1 flex flex-col m-3 md:m-10">
-                <div class="shadow-md w-full rounded-xl p-10 h-96 flex flex-col items-center sm:items-start justify-center bg-slate-600/75 bg-cover bg-center bg-blend-darken" style="background-image: url('images/rws.jpg')">
-                    <h1 class="text-5xl text-slate-200 font-bold leading-normal text-center sm:text-left">Resorts World<br/>Sentosa</h1>
+            <div class="flex flex-col flex-1 m-3 md:m-10">
+                <div class="flex flex-col justify-center items-center p-10 w-full h-96 bg-center bg-cover rounded-xl shadow-md bg-blend-darken sm:items-start bg-slate-600/75" style="background-image: url('images/rws.jpg')">
+                    <h1 class="text-5xl font-bold leading-normal text-center text-slate-200 sm:text-left">Resorts World<br/>Sentosa</h1>
                     <button type="button" class="mt-3 text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Book now</button>
                 </div>
                 
-                <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-3">
+                <div class="grid grid-cols-1 gap-3 mt-8 md:grid-cols-3">
                     <div>
                         <h2 class="text-3xl font-medium text-amber-700">Universal Studios Singapore</h2>
-                        <p class="text-lg mt-2">Southeast Asia’s first and only Universal Studios theme park, featuring 24 rides, shows and attractions in seven themed zones.</p>
+                        <p class="mt-2 text-lg">Southeast Asia’s first and only Universal Studios theme park, featuring 24 rides, shows and attractions in seven themed zones.</p>
                     </div>
-                    <img class="shadow-lg rounded-lg col-span-2" src="images/globe.jpg"/>
+                    <img class="col-span-2 rounded-lg shadow-lg" src="images/globe.jpg"/>
                 </div>
                 
 <!--                <div class="flex justify-between">-->
@@ -28,7 +28,7 @@ export const QinGuan = {
 <!--                                </div>-->
 <!--                                <input datepicker type="text" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">-->
 <!--                            </div>-->
-<!--                            <button type="button" class="py-2 px-3 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-4">Find available slots</button>-->
+<!--                            <button type="button" class="px-3 py-2 mt-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Find available slots</button>-->
 <!--                        </form>-->
 <!--                    </div>-->
 <!--                </div>-->

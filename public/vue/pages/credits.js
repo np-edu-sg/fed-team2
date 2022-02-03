@@ -8,11 +8,11 @@ const links = {
 
 export const Credits = {
     template: `
-        <div class="w-screen h-screen flex flex-col">
+        <div class="flex flex-col w-screen h-screen">
             <v-header></v-header>
-            <div class="container mx-auto flex-1">
+            <div class="container flex-1 mx-auto">
                 <div class="justify-start p-3 border-b-2 border-slate-200" v-for="(value, key) in links">
-                    <h1 class="text-2xl mb-3">{{ key }}</h1>
+                    <h1 class="mb-3 text-2xl">{{ key }}</h1>
                     <ul>
                         <li v-for="link in value">
                             <a :href="link" class="link hover:underline text-slate-500 hover:text-slate-900">{{ link }}</a>
