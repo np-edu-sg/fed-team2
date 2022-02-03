@@ -111,8 +111,9 @@ body {
 .events .heading {
     align-items: flex-start;
     font-weight: 650;
-    font-size: 3em;
+    font-size: 35px;
     color: #115e72;
+    padding-bottom: 5px;
 }
 
 .events-text {
@@ -123,14 +124,14 @@ body {
 }
 
 .subtitle {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 500;
-    color: #54777f;
+    color: #2c7a8c;
 }
 
 .description {
-    font-size: 18px;
-    color: #4f808c;
+    font-size: 20px;
+    color: #2c7a8c;
 }
 
 .event-table {
@@ -173,18 +174,17 @@ body {
 }
 /* The dots/bullets/indicators */
 .dot {
-    cursor: pointer;
+    cursor: default;
     height: 10px;
     width: 10px;
     margin: 0 2px;
-    background-color: #999999;
+    background-color: #bad8dd;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
 }
-.active,
-.dot:hover {
-    background-color: #111111;
+.active {
+    background-color: #87bcc1;
 }
 /* Fading animation */
 .fade {
