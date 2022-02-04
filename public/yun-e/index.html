@@ -5,19 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="module" src="../vue/index.js"></script>
     <script src="js/ArtScienceMuseum.js"></script>
     <title>ArtScience Museum</title>
-    <script>
-        function fadeImage(I) {
-            var Image = '#' + I; //String concatenation
-            $(Image).fadeIn();
-            $(Image).fadeOut(3000, function () {
-                fadeImage((I == 1) ? 5 : I - 1);
-            });
-        }
-    </script>
 </head>
 <body>
 <div id="header"></div>
@@ -171,11 +161,12 @@
 
 <!--Testimonials-->
 <!--Ticket prices-->
+<section class="heading-padding">
+    <h2 class="heading">Ticket prices</h2>
+</section>
+
 <section class="ticket mx-auto mw-screen overflow-x-scroll">
-    <section class="heading-padding">
-        <h2 class="heading">Ongoing Events</h2>
-    </section>
-    
+
     <table class="table mx-2">
         <tr class="table-row-group text-center">
             <td class="table-cell px-16 align-middle top"></td>
@@ -191,7 +182,7 @@
             <td class="table-cell px-16 align-middle">S$12</td>
             <td class="table-cell px-16 align-middle">S$45</td>
             <td class="table-cell px-16 align-middle">S$13.30</td>
-            <td class="table-cell px-16 align-middle">S$9.80</td>                
+            <td class="table-cell px-16 align-middle">S$9.80</td>
         </tr>
         <tr class="table-row-group text-center">
             <td class="table-cell px-16 align-middle">Radical Curiosity</td>
@@ -210,44 +201,77 @@
             <td class="table-cell px-16 align-middle">NA</td>
         </tr>
         <tr class="table-row-group text-center">
-            <td class="table-cell px-16 align-middle">Attack  on Titan</td>
+            <td class="table-cell px-16 align-middle">Attack on Titan</td>
             <td class="table-cell px-16 align-middle">S$18</td>
             <td class="table-cell px-16 align-middle">S$14</td>
             <td class="table-cell px-16 align-middle">S$50</td>
             <td class="table-cell px-16 align-middle">S$14.70</td>
             <td class="table-cell px-16 align-middle">S$11.20</td>
         </tr>
-    </table><br/>
-    
+    </table>
+    <br/>
+
 </section>
 <!--Booking form-->
 <section class="booking">
+    <h1 class="booking-heading text-center"><br/>Book your tickets</h1>
     <div class="form">
-        <h1 class="booking-heading">Book your tickets</h1><br/>
         <form>
             <label>Event: </label>
-            <select required name="Option" id="Option" onchange="option()">
+            <select required name="Option" id="choose-event" onchange="option()">
                 <option value="Future World">Future World</option>
                 <option value="Radical Curiosity">Radical Curiosity</option>
                 <option value="Hope From Chaos">Hope From Chaos</option>
                 <option value="Attack On Titans">Attack On Titans</option>
-            </select><br/>
-            <label>Number of tickets*: </label>
-            <input type="number" name="quantity" id="Quantity" required max="5" min="1" value="1" onchange="option()"><br />
-            <p class="for-family-ticket">*If you ordered the family ticket set, indicate how many families will be attending</p>
-            <br/>
-            <label>Name: </label>
-            <input name="name" type="text" id="Name" onchange="option()" placeholder="Enter your name" required/><br />
-            <label>Email: </label>
-            <input name="email" type="text" id=Email" onchange="option()" placeholder="Enter your email" required /><br />
+            </select><br/><br/>
 
+
+            <label>Ticket type: </label>
+            <input type="radio" id="adult" name="ticket-type" value="Adult" onchange="option()" required />
+            <label for="adult">Adult</label>
+            <input type="radio" id="concession" name="ticket-type" value="Concession" onchange="option()"/>
+            <label for="concession">Concession</label>
+            <input type="radio" id="family" name="ticket-type" value="Family" onchange="option()"/>
+            <label for="family">Family</label>
+            <input type="radio" id="SRMA" name="ticket-type" value="Sands Rewards Member (Adult)" onchange="option()"/>
+            <label for="SRMA">Sands Rewards Member (Adult)</label>
+            <input type="radio" id="SRMC" name="ticket-type" value="Sands Rewards Member (Concession)" onchange="option()"/>
+            <label for="SRMC">Sands Rewards Member (Concession)</label><br/><br/>
+
+
+            <label>Number of tickets*: </label>
+            <input type="number" name="quantity" id="Quantity" required max="5" min="1" value="1"
+                   onchange="option()"><br/>
+            <p class="for-family-ticket">*If you ordered the family ticket set, indicate how many families will be
+                attending</p>
+            <br/>
+            
+            <label>Name: </label>
+            <input name="name" type="text" id="Name" onchange="option()" placeholder="Enter your name" required/><br/>
+            
+            <label>Email: </label>
+            <input name="email" type="text" id=Email" onchange="option()" placeholder="Enter your email" required/><br/>
+           
+            <label>Contact number: </label>
+            <input name="number" type="text" id="Number" onchange="option()" placeholder="Enter your contact number"
+                   required/><br/>
             <label>Collection Date: </label>
-            <input type="date" id="date" onchange="option()" required /><br /><br />
+            <input type="date" id="ticket-date" onchange="option()" required/><br/><br/>
+            
             <input type="submit">
             <input type="reset">
         </form>
+        <div class="ticket-display relative align-content-center" id="ticket-display">
+            <img class="mx-auto" id="ticket-pic"/>
+            <div class="absolute top-0 mx-auto w-full left-0 text-center ticket-details">
+                <p id="event-name"></p><br/>
+                <p id="number-of-tickets"></p><br/>
+                <p id="event-date"></p>
+            </div>
+        </div>
     </div>
 </section>
+
 
 <div id="footer"></div>
 
