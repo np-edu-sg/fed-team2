@@ -5,7 +5,7 @@ import {Landing} from "./pages/landing.js";
 import {QinGuan} from "./pages/qin-guan.js";
 import {Credits} from "./pages/credits.js";
 
-import {Card, Footer, Header, Input, Label, Select, Button} from "./components";
+import {Card, Footer, Header, Input, Label, Select, Button} from "./components/index.js";
 
 tailwind.config = {
     darkMode: 'class',
