@@ -92,7 +92,6 @@ body {
     background: #549db0; /*change later*/
     width: 50%;
     padding: 60px;
-    width: 50%;
 }
 
 .heading {
@@ -164,14 +163,7 @@ body {
     margin: auto;
     align-content: center;
 }
-/* Number text (1/3 etc) */
-.numbertext {
-    color: #ffffff;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
+
 /* The dots/bullets/indicators */
 .dot {
     cursor: default;
@@ -219,18 +211,37 @@ body {
 }
 
 /*For tickets*/
-table{
-    padding-left: 30px;
-    border: 30px;
-    display: flex;
-}
-
-table caption{
-    padding-top: 50px;
-    align-content: flex-start;
-}
-
-td {
-    min-width: 150px;
+.ticket {
     padding: 10px;
+}
+
+.heading-padding {
+    padding-left: 30px;
+}
+
+.ticket .heading{
+    font-size: 30px;
+    color: #0c5460;
+    padding-left: 10px;
+}
+
+.table-cell {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+    border-bottom: solid 1px #95bfc6;
+}
+
+.top{
+    border-top: solid 2px #0c5460;
+    border-bottom: solid 2px #0c5460;
+}
+
+.table-styling {
+    overflow: hidden;
+}
+
+.ticket-header-border{
+    border: solid 2px #0c5460;
+    border-right: none;
 }
