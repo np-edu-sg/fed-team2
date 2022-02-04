@@ -8,16 +8,20 @@ const links = {
 }
 
 export const Credits = {
+    //language=HTML
     template: `
         <div class="flex flex-col w-screen h-screen">
             <v-header></v-header>
             <div class="flex-1">
                 <div class="container mx-auto">
-                    <div class="justify-start p-3 border-b-2 border-slate-200 break-all" v-for="(value, key) in links">
+                    <div class="justify-start py-6 border-b-2 border-slate-200 break-all" v-for="(value, key) in links">
                         <h1 class="mb-3 text-2xl font-display font-semibold">{{ key }}</h1>
                         <ul>
                             <li v-for="link in value">
-                                <a :href="link" class="link hover:underline text-slate-500 hover:text-slate-900 font-body">{{ link }}</a>
+                                <a :href="link"
+                                   class="link hover:underline text-slate-500 hover:text-slate-900 font-body">
+                                    {{ link }}
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -26,7 +30,5 @@ export const Credits = {
             <v-footer></v-footer>
         </div>
     `,
-    computed: {
-        links: () => links
-    }
+    data: () => ({links})
 }
