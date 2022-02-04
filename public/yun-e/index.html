@@ -3,6 +3,7 @@
     <meta name="author" content="Tan Yun-E"/>
     <meta name="description" content="FED_Assignment_S10223135"/>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="module" src="../vue/index.js"></script>
@@ -77,19 +78,15 @@
         <div class="col-1">
             <div class="slideshow-container">
                 <div class="mySlides fade">
-                    <div class="numbertext">1 / 3</div>
                     <img src="images/FutureWorld.jpg" alt="Future World" style="width:100%">
                 </div>
                 <div class="mySlides fade">
-                    <div class="numbertext">2 / 3</div>
                     <img src="images/RadicalCuriosity.jpg" alt="RadicalCuriosity" style="width:100%">
                 </div>
                 <div class="mySlides fade">
-                    <div class="numbertext">3 / 3</div>
                     <img src="images/HopeFromChaos.jpg" alt="Hope From Chaos" style="width:100%">
                 </div>
                 <div class="mySlides fade">
-                    <div class="numbertext">4 / 4</div>
                     <img src="images/AOT.jpg" alt="AOT" style="width:100%">
                 </div>
                 <div style="text-align:center">
@@ -127,25 +124,25 @@
             <h2 class="heading">Ongoing Events</h2>
             <div class="slideshow-container">
                 <div class="mySlidest fade">
-                    <p class="subtitle">Future World: Where Art Meets Science</p> 
-                    <p class="description">Immerse yourself in a world of art, science, magic and metaphor through a 
+                    <p class="subtitle">Future World: Where Art Meets Science</p>
+                    <p class="description">Immerse yourself in a world of art, science, magic and metaphor through a
                         collection of digital interactive installation.</p><br/>
                 </div>
                 <div class="mySlidest fade">
                     <p class="subtitle">Radical Curiosity: In the Orbit of Buckminster Fuller</p>
-                    <p class="description">Journey through the universe of inventor and visionary, Buckminster Fuller 
+                    <p class="description">Journey through the universe of inventor and visionary, Buckminster Fuller
                         who worked across multiple disciplines including art, science, architecture and design.</p><br/>
                 </div>
                 <div class="mySlidest fade">
                     <p class="subtitle">Hope from Chaos: Pandemic Reflections</p>
-                    <p class="description">Hope from Chaos marks the second anniversary of the arrival of the COVID-19 
-                        virus into Singapore. Discover the science of infectious diseases and reflect on life 
+                    <p class="description">Hope from Chaos marks the second anniversary of the arrival of the COVID-19
+                        virus into Singapore. Discover the science of infectious diseases and reflect on life
                         during a global pandemic.</p><br/>
                 </div>
                 <div class="mySlidest fade">
                     <p class="subtitle">Attack On Titan: The Exhibition</p>
-                    <p class="description">Featuring over 180 artworks based on the best-selling dark fantasy manga and 
-                        anime series written and illustrated by Hajime Isayama, be introduced to a world where the last 
+                    <p class="description">Featuring over 180 artworks based on the best-selling dark fantasy manga and
+                        anime series written and illustrated by Hajime Isayama, be introduced to a world where the last
                         humans are hiding behind walls to fight against mindless gigantic humanoids.</p><br/>
                 </div>
             </div>
@@ -174,26 +171,82 @@
 
 <!--Testimonials-->
 <!--Ticket prices-->
-<section class="tickets">
-    <table>
-        <tr>
-            <th></th>
-            <td>Adult</td>
-            <td>Concession</td>
-            <td>Family (2 Adults & 2 Children)</td>
-            <td>too many</td>
-            <td>categories</td>
+<section class="ticket mx-auto mw-screen overflow-x-scroll">
+    <section class="heading-padding">
+        <h2 class="heading">Ongoing Events</h2>
+    </section>
+    
+    <table class="table mx-2">
+        <tr class="table-row-group text-center">
+            <td class="table-cell px-16 align-middle top"></td>
+            <td class="table-cell px-3 align-middle top">Adult</td>
+            <td class="table-cell px-3 align-middle top">Concession</td>
+            <td class="table-cell px-3 align-middle top">Family (2 Adults & 2 Children)</td>
+            <td class="table-cell px-3 align-middle top">Sands Rewards Member (Adult)</td>
+            <td class="table-cell px-3 align-middle top">Sands Rewards Member (Concession^)</td>
         </tr>
-        <tr>
-            <th>text</th>
-            <td>price</td>
-            <td>price</td>
-            <td>price</td>
-            <td>price</td>
-            <td>price</td>
+        <tr class="table-row-group text-center">
+            <td class="table-cell px-16 align-middle">Future World</td>
+            <td class="table-cell px-16 align-middle">S$16</td>
+            <td class="table-cell px-16 align-middle">S$12</td>
+            <td class="table-cell px-16 align-middle">S$45</td>
+            <td class="table-cell px-16 align-middle">S$13.30</td>
+            <td class="table-cell px-16 align-middle">S$9.80</td>                
         </tr>
-    </table>
+        <tr class="table-row-group text-center">
+            <td class="table-cell px-16 align-middle">Radical Curiosity</td>
+            <td class="table-cell px-16 align-middle">S$16</td>
+            <td class="table-cell px-16 align-middle">S$12</td>
+            <td class="table-cell px-16 align-middle">S$45</td>
+            <td class="table-cell px-16 align-middle">S$13.30</td>
+            <td class="table-cell px-16 align-middle">S$9.80</td>
+        </tr>
+        <tr class="table-row-group text-center">
+            <td class="table-cell px-16 align-middle">Hope from Chaos</td>
+            <td class="table-cell px-16 align-middle">S$6</td>
+            <td class="table-cell px-16 align-middle">S$6</td>
+            <td class="table-cell px-16 align-middle">S$18</td>
+            <td class="table-cell px-16 align-middle">NA</td>
+            <td class="table-cell px-16 align-middle">NA</td>
+        </tr>
+        <tr class="table-row-group text-center">
+            <td class="table-cell px-16 align-middle">Attack  on Titan</td>
+            <td class="table-cell px-16 align-middle">S$18</td>
+            <td class="table-cell px-16 align-middle">S$14</td>
+            <td class="table-cell px-16 align-middle">S$50</td>
+            <td class="table-cell px-16 align-middle">S$14.70</td>
+            <td class="table-cell px-16 align-middle">S$11.20</td>
+        </tr>
+    </table><br/>
+    
+</section>
+<!--Booking form-->
+<section class="booking">
+    <div class="form">
+        <h1 class="booking-heading">Book your tickets</h1><br/>
+        <form>
+            <label>Event: </label>
+            <select required name="Option" id="Option" onchange="option()">
+                <option value="Future World">Future World</option>
+                <option value="Radical Curiosity">Radical Curiosity</option>
+                <option value="Hope From Chaos">Hope From Chaos</option>
+                <option value="Attack On Titans">Attack On Titans</option>
+            </select><br/>
+            <label>Number of tickets*: </label>
+            <input type="number" name="quantity" id="Quantity" required max="5" min="1" value="1" onchange="option()"><br />
+            <p class="for-family-ticket">*If you ordered the family ticket set, indicate how many families will be attending</p>
+            <br/>
+            <label>Name: </label>
+            <input name="name" type="text" id="Name" onchange="option()" placeholder="Enter your name" required/><br />
+            <label>Email: </label>
+            <input name="email" type="text" id=Email" onchange="option()" placeholder="Enter your email" required /><br />
 
+            <label>Collection Date: </label>
+            <input type="date" id="date" onchange="option()" required /><br /><br />
+            <input type="submit">
+            <input type="reset">
+        </form>
+    </div>
 </section>
 
 <div id="footer"></div>
