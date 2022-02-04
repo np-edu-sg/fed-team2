@@ -11,7 +11,8 @@ const items = [
     },
     {
         title: "Marina Bay Sands",
-        href: "ryan"
+        href: "ryan",
+        img: "ryan/images/mbs1.jpg"
     },
     {
         title: "Art Science Museum",
