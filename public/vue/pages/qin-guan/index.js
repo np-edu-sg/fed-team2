@@ -95,16 +95,19 @@ export const QinGuan = {
         <div class="flex flex-col w-full">
             <v-header/>
             <div class="flex flex-col flex-1 p-3 md:pt-10 md:px-20 lg:px-32 xl:px-52">
-                <div class="flex flex-col justify-center items-center p-10 mb-10 w-full h-96 bg-center bg-cover rounded-xl shadow-md bg-blend-darken sm:items-start bg-slate-600/75"
+                <div class="flex flex-col justify-center items-center p-6 mb-10 w-full h-96 bg-center bg-cover rounded-xl shadow-md bg-blend-darken sm:items-start bg-slate-600/75"
                      style="background-image: url('images/rws.jpg')">
                     <h1 class="text-5xl font-bold leading-normal text-center text-slate-200 sm:text-left font-display">
                         Resorts
                         World<br/>Sentosa</h1>
-                    <button @click="toBooking"
-                            type="button"
-                            class="mt-3 text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 font-body">
-                        Book now
-                    </button>
+                    <div class="flex">
+                        <v-button @click="toBooking">
+                            Book now
+                        </v-button>
+                        <v-button color="alternative" @click="cont">
+                            View bookings
+                        </v-button>
+                    </div>
                 </div>
 
                 <v-grid-card>
@@ -165,72 +168,79 @@ export const QinGuan = {
                 <div id="form"></div>
                 <hr class="my-10"/>
 
-                <div class="h-[1000px]">
-                    <v-card :fluid="true">
-                        <div class="p-4 bg-gradient-to-br from-orange-400 to-yellow-500">
-                            <h5 class="mb-4 text-2xl font-semibold tracking-tight text-gray-900 font-display dark:text-white">
-                                Book an attraction now
-                            </h5>
-                            <div class="grid flex-1 grid-cols-1 gap-6 md:grid-cols-2 font-body">
-                                <v-input
-                                        v-model="form.date"
-                                        type="date"
-                                        label="I'm going on"
-                                        :min="new Date().toISOString().split('T')[0]"
-                                />
-                                <v-select
-                                        v-model="form.attraction"
-                                        title="I want to buy tickets for"
-                                        :options="attractionNames"
-                                />
-                            </div>
+                <v-card :fluid="true" class="mb-10">
+                    <div class="p-4 bg-gradient-to-br from-orange-400 to-yellow-500">
+                        <h5 class="mb-4 text-2xl font-semibold tracking-tight text-gray-900 font-display dark:text-white">
+                            Book an attraction now
+                        </h5>
+                        <div class="grid flex-1 grid-cols-1 gap-6 md:grid-cols-2 font-body">
+                            <v-input
+                                    v-model="form.date"
+                                    type="date"
+                                    label="I'm going on"
+                                    :min="new Date().toISOString().split('T')[0]"
+                            />
+                            <v-select
+                                    v-model="form.attraction"
+                                    title="I want to buy tickets for"
+                                    :options="attractionNames"
+                            />
                         </div>
 
-                        <div class="overflow-x-scroll font-body">
-                            <table class="w-full">
-                                <thead class="bg-orange-100 dark:bg-gray-700">
-                                <tr>
-                                    <th>
-                                        <div class="p-4">
-                                            <input type="checkbox"
-                                                   :checked="selectedAll"
-                                                   @change="selectAll"
-                                            >
-                                        </div>
-                                    </th>
+                        <div class="pt-6 mb-0 font-semibold text-md font-display">
+                            Available tickets:
+                        </div>
+                    </div>
 
-                                    <th v-for="item in header"
-                                        scope="col"
-                                        :class="tableClasses['th']"
-                                    >
-                                        {{ item }}
-                                    </th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr v-for="(item, idx) in attraction"
-                                    class="bg-orange-50 border-b dark:bg-gray-800 dark:border-gray-700">
-                                    <th>
-                                        <div class="p-4">
-                                            <input type="checkbox"
-                                                   :value="item[0]"
-                                                   v-model="selected[idx]"
-                                            >
-                                        </div>
-                                    </th>
+                    <div class="overflow-x-scroll font-body">
+                        <table class="w-full">
+                            <thead class="bg-orange-100 dark:bg-gray-700">
+                            <tr>
+                                <th>
+                                    <div class="p-4">
+                                        <input type="checkbox" id="check"
+                                               :checked="selectedAll"
+                                               @change="selectAll"
+                                        >
+                                    </div>
+                                </th>
 
-                                    <td v-for="(text, idx2) in item"
-                                        :class="idx2 === 0 ? tableClasses['td-bold'] : tableClasses['td']">
+                                <th v-for="item in header"
+                                    :class="tableClasses['th']"
+                                    scope="col"
+                                >
+                                    {{ item }}
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr v-for="(item, idx) in attraction"
+                                class="bg-orange-50 border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th>
+                                    <div class="p-4">
+                                        <input type="checkbox"
+                                               :value="item[0]"
+                                               v-model="selected[idx]"
+                                        >
+                                    </div>
+                                </th>
+
+                                <td v-for="(text, idx2) in item"
+                                    :class="idx2 === 0 ? tableClasses['td-bold'] : tableClasses['td']">
                                         <span>
                                             {{ text }}
                                         </span>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </v-card>
-                </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div v-if="selectedAny" class="p-4">
+                        <v-button color="red" @click="cont">Continue</v-button>
+                        <v-button color="alternative" @click="cancel">Cancel</v-button>
+                    </div>
+                </v-card>
             </div>
             <v-footer></v-footer>
         </div>
@@ -243,29 +253,35 @@ export const QinGuan = {
         })
         const attraction = computed(() => pricings[form.attraction])
 
-        const selected = ref([])
-        const selectedAll = computed(() => selected.value.length === attraction.value.length && selected.value.every(i => i))
+        const selected = ref(new Array(attraction.value.length).fill(false))
+        const selectedAny = computed(() => selected.value.length > 0 && selected.value.some(i => i === true))
+        const selectedAll = computed(() => selected.value.length === attraction.value.length && selected.value.every(i => i === true))
 
         const select = (idx) => selected.push(idx)
+        const cancel = () => selected.value = new Array(attraction.value.length).fill(false)
         const toBooking = () => {
             window.location.href = "#form"
         }
         const selectAll = () => {
-            const c = []
-            for (let idx = 0; idx < attraction.value.length; idx++) {
-                c[idx] = !selectedAll.value
-            }
-            selected.value = c
+            selected.value = new Array(attraction.value.length).fill(!selectedAll.value)
+        }
+        const cont = () => {
+            localStorage.setItem("v", JSON.stringify({
+                attraction: form.attraction.value,
+                selected: selected.value
+            }))
+            window.location.href = "cart.html"
         }
 
         watch(() => form.attraction, () => {
-            selected.value = []
+            selected.value = new Array(attraction.value.length).fill(false)
         })
 
         return {
-            selectedAll,
             attractionNames,
             attraction,
+            selectedAll,
+            selectedAny,
             selected,
             pricings,
             form,
@@ -274,6 +290,8 @@ export const QinGuan = {
             tableClasses,
 
             select,
+            cancel,
+            cont,
             toBooking,
             selectAll
         }
