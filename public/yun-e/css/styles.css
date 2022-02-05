@@ -318,7 +318,7 @@ input[type=number] {
 
 
 .ticket-details {
-    padding-top: 60px;
+    padding-top: 50px;
     /*color: #2a706e;*/
     color: white;
 }
@@ -369,6 +369,11 @@ input[type=submit] {
     color: white;
 }
 
+input[type=submit]:hover {
+    background-color: #1e5154;
+    cursor: pointer;
+}
+
 input[type=reset] {
     margin-left: 25px;
     padding: 5px;
@@ -377,6 +382,11 @@ input[type=reset] {
     background-color: #346f75;
     border-radius: 7px;
     color: white;
+}
+
+input[type=reset]:hover {
+    background-color: #1e5154;
+    cursor: pointer;
 }
 
 .final-message {
