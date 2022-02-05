@@ -13,9 +13,12 @@ window.onload = function () {
 }
 
 
+
+
 function bookingPrice() {
     let chosen_ticket;
     let total_price;
+    let data_array;
     let ticket_type = document.getElementById("book-ticket").value
     let noOfAdults = document.getElementById("book-adults").value
     let noOfChildren = document.getElementById("book-children").value
@@ -32,22 +35,29 @@ function bookingPrice() {
         }
     }
     total_price = chosen_ticket.AdultPrice * noOfAdults + chosen_ticket.ChildPrice * noOfChildren
-    return total_price
+    data_array = [total_price, noOfAdults, chosen_ticket.AdultPrice, noOfChildren, chosen_ticket.ChildPrice, chosen_ticket.Name]
+    return data_array
 }
 
 
 function showFinalMessage() {
-    let total_price = bookingPrice()
+    let data_array = bookingPrice()
     let name = document.getElementById("customer_name").value
     let email = document.getElementById("customer_email").value
-    document.getElementById("submission").innerText = "Thank you for your order, " + name + ". We will send you the ticket codes to your email at " + email
-    document.getElementById("price").innerText = "Total Price: " + total_price
+    let booking_date = document.getElementById("book-date").value
+    document.getElementById("submission").innerText = "Thank you for your order, " + name + ". We will send you the ticket codes to your email at " + email +"."
+    document.getElementById("booking_type").innerText = "Booked Ticket: " + data_array[5]
+    document.getElementById("booking_date").innerText = "Booking Date: " + booking_date
+    document.getElementById("price").innerText = "Total Price = " + data_array[1] + " * $" + data_array[2].toFixed(2)
+        + " + " + data_array[3] + " * $" + data_array[4].toFixed(2) + " = $" + data_array[0].toFixed(2)
+    window.location.href = "#submission"
 }
 
 
-/*
-function clearMessage()
-{
-
+function clearMessage() {
+    document.getElementById("submission").innerText = ""
+    document.getElementById("booking_type").innerText = ""
+    document.getElementById("booking_date").innerText = ""
+    document.getElementById("price").innerText = ""
+    window.scroll({top:0})
 }
-*/

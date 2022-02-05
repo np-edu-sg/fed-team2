@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta name="author" content="Fun Gao Wei,Farrell"/>
+    <meta name="description" content="FED_Assignment_S10222081"/>
+    <meta charset="utf-8">
+    <title>Gardens By the Bay Booking Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+    <script type="module" src="../vue/index.js"></script>
+    <script src="js/gbtbScript.js"></script>
+</head>
+<body class="font-body">
+<div id="header"></div>
+<div class="container h-1/6 mx-auto">
+    <a class="p-3 mx-2 text-blue-600 hover:text-blue-400 hover:underline" href="index.html">Return to Main Page</a>
+    <p class="text-center text-6xl">Gardens By The Bay Booking Form</p>
+</div>
+
+<div class="container mx-auto">
+    <fieldset class="p-3 mx-2 rounded-lg border-2 border-purple-400 border-solid form">
+        <legend>Booking form</legend>
+        <form onsubmit="showFinalMessage(); return false" onreset="clearMessage()">
+            <fieldset class="p-5 rounded-lg border-2 border-fuchsia-500 form">
+                <legend>Customer Contact Details</legend>
+                <label for="customer_name" class="inline-block w-32 customer_name">Name:</label>
+                <input id="customer_name" type="text" placeholder="Enter Your Name" class="mb-3 border border-black"
+                       required>
+                <br>
+                <label for="customer_email" class="inline-block w-32 customer_email">Email:</label>
+                <input id="customer_email" type="email" placeholder="Enter Your Email"
+                       class="mb-3 border border-black"
+                       required>
+                <br>
+                <label for="customer_contact_no" class="inline-block w-32 customer_contact_no">Contact
+                    Number:</label>
+                <input id="customer_contact_no" type="text" placeholder="Enter Your Contact No."
+                       class="mb-3 border border-black" required>
+                <br>
+                <label for="customer_street_no" class="inline-block w-32 customer_street_no">Street Number:</label>
+                <input id="customer_street_no" type="text" placeholder="Enter Your Street No."
+                       class="mb-3 border border-black" pattern="\d{1,}" required>
+                <label for="customer_street_name" class="inline-block w-24 customer_street_name">Street
+                    Name:</label>
+                <input id="customer_street_name" type="text" placeholder="Enter Your Street Name"
+                       class="mb-3 border border-black" pattern="[A-Za-z]+" required>
+                <br>
+                <label for="customer_unit_no" class="inline-block w-32 customer_unit_no">Unit Number:</label>
+                <input id="customer_unit_no" type="text" placeholder="Enter Your Unit No."
+                       class="mb-3 border border-black" pattern="#\d+-\d+">
+                <label for="customer_postal_code" class="inline-block w-24 customer_postal_code">Postal
+                    Code:</label>
+                <input id="customer_postal_code" type="text" placeholder="Enter Your Postal Code"
+                       class="mb-3 border border-black" maxlength="6" pattern="\d{6}" required>
+            </fieldset>
+            <br>
+            <fieldset class="p-5 rounded-lg border-2 border-fuchsia-500 form">
+                <legend>Booking Details</legend>
+                <label for="book-date" class="inline-block w-2/6 book-date">Booking Date (Up to 1 month in
+                    advance):</label>
+                <input id="book-date" type="date" name="date" class="inline-block mb-3 border border-black"
+                       required>
+                <br>
+                <label for="book-ticket" class="inline-block w-2/6 book-ticket">Ticket type (Valid until 23:59 of the
+                    booking date):</label>
+                <select id="book-ticket" class="mb-3 border border-black">
+                    <option disabled selected>Please Select a Ticket</option>
+                    <option>Flower Dome</option>
+                    <option>Cloud Forest</option>
+                    <option>Floral Fantasy</option>
+                    <option>OCBC Skyway</option>
+                    <option>Supertree Observatory</option>
+
+                </select>
+                <br>
+                <label for="book-adults" class="inline-block w-2/6 book-adults">Number of Adult Tickets (Up to 5,
+                    Minimum of 1):</label>
+                <input id="book-adults" type="number" value="1" min="1" max="5" class="mb-3 border border-black"
+                       required>
+                <br>
+                <label for="book-children" class="inline-block w-2/6 book-children">Number of Children Tickets (Up
+                    to
+                    5):</label>
+                <input id="book-children" type="number" value="0" min="0" max="5" class="mb-3 border border-black"
+                       required>
+            </fieldset>
+            <br>
+            <button type="submit"
+                   class="px-1 border-2 border-solid submit-button form border-neutral-900 bg-slate-200 hover:bg-slate-300">
+                Submit Booking
+            </button>
+            <button type="reset"
+                   class="px-1 border-2 border-solid reset-button form border-neutral-900 bg-slate-200 hover:bg-slate-300">
+                Reset Booking Form
+            </button>
+        </form>
+        <div id="submission" class="p-5"></div>
+        <div id="booking_type" class="p-5"></div>
+        <div id="booking_date" class="p-5"></div>
+        <div id="price" class="p-5"></div>
+
+    </fieldset>
+</div>
+</body>
+</html>
