@@ -33,8 +33,13 @@ function generateStyles(html) {
 export function wc(component) {
     if (!component.template) throw new Error("Vue component must have a template")
 
+    let c;
+    if (component.wc) {
+        c = `<div class="${component.wc.join(" ")}"/>`;
+    }
+
     const template = component.template.replace("slate", "blue-gray")
-    const styles = generateStyles(template)
+    const styles = generateStyles(template + c)
 
     return {
         ...component,
