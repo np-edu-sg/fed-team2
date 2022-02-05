@@ -10,20 +10,19 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
           rel="stylesheet">
     <script type="module" src="../vue/index.js"></script>
-    <script src="js/gbtbScript.js"></script>
+    <script src="js/gbtbBookingScript.js"></script>
 </head>
 <body class="font-body">
 <div id="header"></div>
 <div class="container h-1/6 mx-auto">
-    <a class="p-3 mx-2 text-blue-600 hover:text-blue-400 hover:underline" href="index.html">Return to Main Page</a>
-    <p class="text-center text-6xl">Gardens By The Bay Booking Form</p>
+    <a class="p-3 mx-2 text-blue-600 hover:text-blue-400 hover:underline" href="index.html">Return to the Main Page</a>
+    <p class="text-center text-5xl">Gardens by the Bay Booking Form</p>
 </div>
-
 <div class="container mx-auto">
-    <fieldset class="p-3 mx-2 rounded-lg border-2 border-purple-400 border-solid form">
+    <fieldset class="p-3 mx-5 rounded-lg border-2 border-purple-400 border-solid bg-purple-200/[.4] form ">
         <legend>Booking form</legend>
         <form onsubmit="showFinalMessage(); return false" onreset="clearMessage()">
-            <fieldset class="p-5 rounded-lg border-2 border-fuchsia-500 form">
+            <fieldset class="p-5 mx-5 rounded-lg border-2 border-fuchsia-500 form">
                 <legend>Customer Contact Details</legend>
                 <label for="customer_name" class="inline-block w-32 customer_name">Name:</label>
                 <input id="customer_name" type="text" placeholder="Enter Your Name" class="mb-3 border border-black"
@@ -41,11 +40,11 @@
                 <br>
                 <label for="customer_street_no" class="inline-block w-32 customer_street_no">Street Number:</label>
                 <input id="customer_street_no" type="text" placeholder="Enter Your Street No."
-                       class="mb-3 border border-black" pattern="\d{1,}" required>
+                       class="mb-3 border border-black" pattern="[\d\s]{1,}" required>
                 <label for="customer_street_name" class="inline-block w-24 customer_street_name">Street
                     Name:</label>
                 <input id="customer_street_name" type="text" placeholder="Enter Your Street Name"
-                       class="mb-3 border border-black" pattern="[A-Za-z]+" required>
+                       class="mb-3 border border-black" pattern="[A-Za-z\s]+" required>
                 <br>
                 <label for="customer_unit_no" class="inline-block w-32 customer_unit_no">Unit Number:</label>
                 <input id="customer_unit_no" type="text" placeholder="Enter Your Unit No."
@@ -56,7 +55,7 @@
                        class="mb-3 border border-black" maxlength="6" pattern="\d{6}" required>
             </fieldset>
             <br>
-            <fieldset class="p-5 rounded-lg border-2 border-fuchsia-500 form">
+            <fieldset class="p-5 mx-5 rounded-lg border-2 border-fuchsia-500 form">
                 <legend>Booking Details</legend>
                 <label for="book-date" class="inline-block w-2/6 book-date">Booking Date (Up to 1 month in
                     advance):</label>
@@ -88,20 +87,22 @@
             </fieldset>
             <br>
             <button type="submit"
-                   class="px-1 border-2 border-solid submit-button form border-neutral-900 bg-slate-200 hover:bg-slate-300">
+                    class="px-5 mx-5 border-2 border-solid submit-button form border-neutral-900 bg-slate-200 hover:bg-slate-300">
                 Submit Booking
             </button>
             <button type="reset"
-                   class="px-1 border-2 border-solid reset-button form border-neutral-900 bg-slate-200 hover:bg-slate-300">
+                    class="px-5 mx-5 border-2 border-solid reset-button form border-neutral-900 bg-slate-200 hover:bg-slate-300">
                 Reset Booking Form
             </button>
         </form>
-        <div id="submission" class="p-5"></div>
-        <div id="booking_type" class="p-5"></div>
-        <div id="booking_date" class="p-5"></div>
-        <div id="price" class="p-5"></div>
+        <div id="submission" class="m-5">Submitted Form Details will be displayed here</div>
+        <div id="booking_type" class="m-5"></div>
+        <div id="booking_date" class="m-5"></div>
+        <div id="price" class="m-5"></div>
 
     </fieldset>
 </div>
+<br>
+<div id="footer"></div>
 </body>
 </html>
