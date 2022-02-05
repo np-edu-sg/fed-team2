@@ -166,31 +166,35 @@
 <div class="m-10">
     <button class="uppercase center" onclick="toggleForm(); goForm()">Book Now</button>
 </div>
-<section class="overlay-form" id="overlay-form-richard">
+<form class="overlay-form" id="overlay-form-richard" onsubmit="displayFinal(); return false;" onreset="resetForm()">
     <div class="close-btn" onclick="toggleForm()">&times;</div>
     <h1 class="uppercase">Book Day Pass Ticket</h1>
     <div class="form-element">
         <label for="firstname">First Name</label>
-        <input type="text" id="firstname" class="text-white">
+        <input type="text" id="firstname" class="text-white" required>
     </div>
     <div class="form-element">
         <label for="lastname">Last Name</label>
-        <input type="text" id="lastname" class="text-white">
+        <input type="text" id="lastname" class="text-white" required>
     </div>
     <div class="form-element">
         <label for="email">Email</label>
-        <input type="email" id="email" class="text-white">
+        <input type="email" id="email" class="text-white" required>
     </div>
     <div class="form-element">
         <label for="date">Date</label>
-        <input type="date" id="date" class="text-white">
+        <input type="date" id="date" class="text-white" required>
     </div>
     <div class="form-element">
         <label for="quantity">Quantity</label>
-        <input type="number" id="quantity" value="1" class="text-white">
+        <input type="number" id="quantity" value="1" class="text-white" required>
     </div>
     <button type="submit">submit</button>
-</section>
+    <button type="reset">reset</button>
+    <br>
+    <br>
+    <p class="text-white" id="finalMessage"></p>
+</form>
 <div id="footer"></div>
 </body>
 <script src="js/animations.js"></script>
