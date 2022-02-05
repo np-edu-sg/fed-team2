@@ -19,7 +19,7 @@ const links = {
         "https://www.marinabaysands.com/content/dam/revamp/ASMrevamp/Hope-from-Chaos/Hope-From-Chaos-mobileMasthead-600x368.jpg",
         "https://www.marinabaysands.com/content/dam/revamp/ASMrevamp/attack-on-titan/Attack-on-Titan_600x368.jpg",
         "https://www.w3docs.com/snippets/css/how-to-create-an-image-slider-or-slideshow.html#slide-2"],
-    "Richard": ["i am a reference"],
+    "Richard": ["https://www.wildwildwet.com/"],
     "Ryan": ["https://www.tripadvisor.com/Hotel_Review-g294265-d1770798-Reviews-Marina_Bay_Sands-Singapore.html",
         "https://www.visitsingapore.com/see-do-singapore/recreation-leisure/resorts/marina-bay-sands",
         "https://www.cntraveler.com/activities/singapore/marina-bay-sands-skypark",
