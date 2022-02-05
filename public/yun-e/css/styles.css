@@ -81,7 +81,6 @@ body {
 .about .contentBx {
     background: #9bbbc3; /*change later*/
     padding: 60px;
-    width: 50%;
 }
 
 .abouttext {
@@ -92,7 +91,6 @@ body {
 
 .about .textBx {
     background: #549db0; /*change later*/
-    width: 50%;
     padding: 60px;
 }
 
@@ -143,7 +141,7 @@ body {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.grid {
+.events .grid {
     grid-column-gap: 40px;
 }
 
@@ -219,6 +217,10 @@ body {
 }
 
 /*For tickets*/
+table {
+    width: 100%;
+}
+
 .ticket {
     padding-left: 10px;
     padding-right: 10px;
@@ -263,8 +265,8 @@ body {
     padding-left: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
-    font-size: 30px;
-    font-weight: 500;
+    font-size: 35px;
+    font-weight: 600;
     color: #368787;
 }
 
@@ -274,6 +276,16 @@ form {
     padding-bottom: 30px;
     padding-right: 30px;
     background-color: #b0d5d6;
+}
+
+.ticket-label {
+    font-size: 25px;
+    color: #4e918f;
+}
+
+.for-family-ticket {
+    font-size: 15px;
+    color: #7d9191;
 }
 
 input[type=text] {
@@ -299,7 +311,7 @@ input[type=number] {
 .ticket-display {
     align-content: center;
     display: none;
-    background: linear-gradient(to top, #8ab7b7, #b0d5d6)
+    background: linear-gradient(to top, #7eaaaa, #b0d5d6)
 }
 
 .ticket-display img {
@@ -310,7 +322,9 @@ input[type=number] {
 
 
 .ticket-details {
-    padding-top: 70px;
+    padding-top: 60px;
+    /*color: #2a706e;*/
+    color: white;
 }
 
 label {
@@ -322,4 +336,39 @@ input[type=date] {
     padding: 3px;
     border: solid 1px #95bfc6;
     border-radius: 5px;
+}
+
+.ticket-header-display {
+    font-size: 50px;
+    font-weight: 650;
+}
+
+.ticket-price-display {
+    font-size: 20px;
+    font-weight: 450;
+}
+
+.ticket-date-display {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+input[type=submit] {
+    margin-right: 25px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #346f75;
+    border-radius: 7px;
+    color: white;
+}
+
+input[type=reset] {
+    margin-left: 25px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #346f75;
+    border-radius: 7px;color: white;
+    
 }
