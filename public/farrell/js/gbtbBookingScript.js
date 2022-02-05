@@ -55,7 +55,7 @@ function showFinalMessage() {
 
 
 function clearMessage() {
-    document.getElementById("submission").innerText = ""
+    document.getElementById("submission").innerText = "Submitted Form Details will be displayed here"
     document.getElementById("booking_type").innerText = ""
     document.getElementById("booking_date").innerText = ""
     document.getElementById("price").innerText = ""

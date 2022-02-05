@@ -11,10 +11,13 @@
           rel="stylesheet">
     <script type="module" src="../vue/index.js"></script>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/gbtbPageScript.js"></script>
+
 </head>
 <body class="font-body">
 <div id="header"></div>
 
+<!--Logo and short description-->
 
 <div class="container mx-auto">
     <div class="flex justify-center w-full">
@@ -37,11 +40,57 @@
     </div>
 </div>
 <br>
+
+<!--Buttons wip-->
+<div class="mx-10">
+    <table class="table table-cols-5 mx-auto">
+        <tr>
+            <td class="mx-auto">
+                <button class="bg-blue-300 hover:bg-blue-400 px-5 rounded-md mx-auto"
+                        onclick="flower_dome_button()"
+                        id="flower-dome">
+                    Flower Dome
+                </button>
+
+            <td class="mx-auto">
+                <button class="bg-blue-300 hover:bg-blue-400 px-5 rounded-md mx-auto"
+                        onclick="cloud_forest_button()"
+                >
+                    Cloud Forest
+                </button>
+            </td>
+            <td class="mx-auto">
+                <button class="bg-blue-300 hover:bg-blue-400 px-5 rounded-md mx-auto"
+                        onclick="floral_fantasy_button()"
+                >
+                    Floral Fantasy
+                </button>
+            </td>
+            <td class="mx-auto">
+                <button class="bg-blue-300 hover:bg-blue-400 px-5 rounded-md mx-auto"
+                        onclick="skyway_button()"
+                >
+                    OCBC Skyway
+                </button>
+            </td>
+            <td class="mx-auto">
+                <button class="bg-blue-300 hover:bg-blue-400 px-5 rounded-md mx-auto"
+                        onclick="observatory_button()"
+                >
+                    Supertree Observatory
+                </button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<!--Attraction details-->
 <div class="container mx-auto">
     <div class="mx-10 rounded-lg">
         <br>
         <p class="mx-auto text-5xl text-center">Attractions</p>
-        <div class="container grid grid-cols-1 p-5 mx-auto md:grid-cols-2 bg-gradient-to-t from-[#d6a9d8]/25 to-[#d6a9d8]/[.4]" id="flower-dome" >
+        <div class="container grid grid-cols-1 p-5 mx-auto md:grid-cols-2 bg-gradient-to-t from-[#d6a9d8]/[.4] to-[#d6a9d8]/25 rounded-lg"
+        >
             <div class="flex flex-col justify-center items-center">
                 <a class="mx-auto"
                    href="https://www.gardensbythebay.com.sg/en/things-to-do/attractions/flower-dome.html"
@@ -68,9 +117,9 @@
             </div>
         </div>
 
-        <hr class="my-10 bg-red-900">
+        <hr class="my-14" id="cloud-forest">
 
-        <div class="container grid grid-cols-1 p-5 mx-auto md:grid-cols-2 bg-gradient-to-t from-[#d6a9d8]/[.4] to-[#d6a9d8]/[.55]" id="cloud-forest">
+        <div class="container grid grid-cols-1 p-5 mx-auto md:grid-cols-2 bg-gradient-to-t from-[#d6a9d8]/[.55] to-[#d6a9d8]/[.4] rounded-lg">
             <div class="inline-block border border-slate-700/25 align-middle  p-[60px] m-[69.8px]">
                 <p class="text-4xl">Cloud Forest</p>
                 <p class="text-lg"> Peek into the clouds and explore the plethora of exotic plant species
@@ -92,8 +141,9 @@
                 </p>
             </div>
         </div>
-        <br>
-        <div class="container grid grid-cols-1 p-5 mx-auto md:grid-cols-2 bg-gradient-to-t from-[#d6a9d8]/[.55] to-[#d6a9d8]/[.7]" id="floral-fantasy">
+        <hr class="my-14" id="floral-fantasy">
+        <div class="container grid grid-cols-1 p-5 mx-auto md:grid-cols-2 bg-gradient-to-t from-[#d6a9d8]/[.7] to-[#d6a9d8]/[.55] rounded-lg"
+        >
             <div class="flex flex-col justify-center items-center">
                 <a href="https://www.gardensbythebay.com.sg/en/things-to-do/attractions/floral-fantasy.html"
                    target="_blank">
@@ -122,8 +172,9 @@
             </div>
 
         </div>
-        <br>
-        <div class="container grid grid-cols-1 p-5 mx-auto md:grid-cols-2 bg-gradient-to-t from-[#d6a9d8]/[.7] to-[#d6a9d8]/[.85]" id="ocbc-skyway">
+        <hr class="my-14" id="ocbc-skyway">
+        <div class="container grid grid-cols-1 p-5 mx-auto md:grid-cols-2 bg-gradient-to-t from-[#d6a9d8]/[.85] to-[#d6a9d8]/[.7] rounded-lg"
+        >
             <div class="border border-slate-700/25 p-[60px] m-[69.8px]">
                 <p class="text-4xl">OCBC Skyway</p>
                 <p class="text-lg"> Enjoy the most enthralling views on the OCBC Skyway. Suspended
@@ -150,8 +201,9 @@
                 </p>
             </div>
         </div>
-        <br>
-        <div class="container grid grid-cols-1 p-5 mx-auto md:grid-cols-2 bg-gradient-to-t from-[#d6a9d8]/[.85] to-[#d6a9d8]/100" id="supertree-observatory">
+        <hr class="my-14" id="supertree-observatory">
+        <div class="container grid grid-cols-1 p-5 mx-auto md:grid-cols-2 bg-gradient-to-t from-[#d6a9d8]/100 to-[#d6a9d8]/[.85] rounded-lg"
+        >
             <div class="flex flex-col justify-center items-center">
                 <a href="https://www.gardensbythebay.com.sg/en/things-to-do/attractions/supertree-observatory.html"
                    target="_blank">
@@ -178,88 +230,92 @@
         </div>
     </div>
     <br>
-    <div class="slideshow-container" onload="showSlides()">
-        <div class="mySlides fade">
-            <img src="media/slideshow_1.jpg" style="height: 500px">
-            <div class="text">Gardens By The Bay in the Day</div>
-        </div>
-        <div class="mySlides fade">
-            <img src="media/slideshow_2.jpg" style="height: 500px; width:1000px">
-            <div class="text">Gardens By The Bay at Night on the ground</div>
-        </div>
-        <div class="mySlides fade">
-            <img src="media/slideshow_3.jpg" style="height: 500px; width:1000px">
-            <div class="text">Gardens By The Bay at Night in the sky</div>
-        </div>
-        <script>
-            var slideIndex = 0;
-            showSlides();
-
-            function showSlides() {
-                var i;
-                var slides = document.getElementsByClassName("mySlides");
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                slideIndex++;
-                if (slideIndex > slides.length) {
-                    slideIndex = 1
-                }
-                slides[slideIndex - 1].style.display = "block";
-                setTimeout(showSlides, 5000);
-            }
-        </script>
-    </div>
-    <br>
-    <div class="container mx-auto">
-        <table class="table mx-10 border-2 border-collapse table-fixed">
-            <caption class="table-caption">Ticket Description</caption>
-            <tr class="table-row text-center">
-                <td class="table-cell px-16 border-2 border-fuchsia-700">Ticket Type</td>
-                <td class="table-cell px-16 border-2 border-fuchsia-700">Price(Adult)</td>
-                <td class="table-cell px-16 border-2 border-fuchsia-700">Price(Child)</td>
-            </tr>
-            <tr class="table-row text-center">
-                <td class="table-cell px-16 w-1/6 align-middle border-2 border-fuchsia-700">Flower Dome</td>
-                <td class="table-cell px-16 w-1/6 align-middle border-2 border-fuchsia-700">SGD 11.00</td>
-                <td class="table-cell px-16 w-1/6 align-middle border-2 border-fuchsia-700">SGD 7.50</td>
-            </tr>
-            <tr class="table-row text-center">
-                <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">Cloud Forest</td>
-                <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">SGD 11.00</td>
-                <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">SGD 7.50</td>
-            </tr>
-            <tr class="table-row text-center">
-                <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">Floral Fantasy</td>
-                <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">SGD 9.00</td>
-                <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">SGD 5.50</td>
-            </tr>
-            <tr class="table-row text-center">
-                <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">OCBC Skyway</td>
-                <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">SGD 7.00</td>
-                <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">SGD 4.50</td>
-            </tr>
-            <tr class="table-row text-center">
-                <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">Supertree Observatory</td>
-                <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">SGD 9.50</td>
-                <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">SGD 5.50</td>
-            </tr>
-        </table>
-    </div>
-    <br>
-    <div class="container mx-auto">
-        <a href="gbtbBooking.html"
-           class="text-blue-600 hover:text-blue-400 hover:underline text-center mx-10">Click here for the
-            booking form</a>
-
-    </div>
-    <br>
-
-
-    <div id="footer"></div>
 </div>
+<!--Image Carousel-->
+<div class="slideshow-container" onload="showSlides()">
+    <div class="mySlides fade">
+        <img src="media/slideshow_1.jpg" style="height: 500px">
+        <div class="text">Gardens By The Bay in the Day</div>
+    </div>
+    <div class="mySlides fade">
+        <img src="media/slideshow_2.jpg" style="height: 500px; width:1000px">
+        <div class="text">Gardens By The Bay at Night on the ground</div>
+    </div>
+    <div class="mySlides fade">
+        <img src="media/slideshow_3.jpg" style="height: 500px; width:1000px">
+        <div class="text">Gardens By The Bay at Night in the sky</div>
+    </div>
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 5000);
+        }
+    </script>
+</div>
+<br>
+<!--Ticket price table-->
+<div class="container mx-auto">
+    <table class="table mx-10 border-2 border-collapse table-fixed">
+        <caption class="table-caption">Ticket Description</caption>
+        <tr class="table-row text-center text-lg">
+            <td class="table-cell px-16 border-2 border-fuchsia-700">Ticket Type</td>
+            <td class="table-cell px-16 border-2 border-fuchsia-700">Price(Adult)</td>
+            <td class="table-cell px-16 border-2 border-fuchsia-700">Price(Child)</td>
+        </tr>
+        <tr class="table-row text-center">
+            <td class="table-cell px-16 w-1/6 align-middle border-2 border-fuchsia-700">Flower Dome</td>
+            <td class="table-cell px-16 w-1/6 align-middle border-2 border-fuchsia-700">SGD 11.00</td>
+            <td class="table-cell px-16 w-1/6 align-middle border-2 border-fuchsia-700">SGD 7.50</td>
+        </tr>
+        <tr class="table-row text-center">
+            <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">Cloud Forest</td>
+            <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">SGD 11.00</td>
+            <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">SGD 7.50</td>
+        </tr>
+        <tr class="table-row text-center">
+            <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">Floral Fantasy</td>
+            <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">SGD 9.00</td>
+            <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">SGD 5.50</td>
+        </tr>
+        <tr class="table-row text-center">
+            <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">OCBC Skyway</td>
+            <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">SGD 7.00</td>
+            <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">SGD 4.50</td>
+        </tr>
+        <tr class="table-row text-center">
+            <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">Supertree Observatory</td>
+            <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">SGD 9.50</td>
+            <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">SGD 5.50</td>
+        </tr>
+    </table>
+</div>
+<br>
+<div class="container mx-auto">
+    <a href="gbtbBooking.html"
+       class="text-blue-600 hover:text-blue-400 hover:underline text-center mx-10">Click here to start booking!</a>
+
+</div>
+<br>
+<div id="footer"></div>
+<a onclick="scroll_top()">
+    <button class="z-10 flex fixed bottom-5 right-5 z-10 items-center px-3 w-20 h-14 rounded-lg border-4 border-[#000] bg-slate-50 hover:bg-slate-200">
+        Scroll to top
+    </button>
+</a>
 </body>
-</html>\
+</html>
 
 <!--https://www.singaporeflowersflorists.com/2020/04/flower-dome-in-singapore-at-gardens-by-the-bay.html -->
 <!--https://matadornetwork.com/read/singapore-gardens-by-the-bay/ -->
