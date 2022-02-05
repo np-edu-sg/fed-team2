@@ -1,9 +1,10 @@
 ﻿function option(){
     //TEMPORARY IMAGE
-    var pic = "images/ticket1.png";
+    var pic = "images/ticket2.png";
     var eventName = document.getElementById("choose-event").value;
     var ticketType = document.getElementsByName("ticket-type");
     var ticketQuantity = document.getElementsByName("quantity");
+    const date = document.getElementById("ticket-date").value;
     let price;
     let quantity;
     let selected_ticket;
@@ -17,16 +18,16 @@
             price = 16;
         }
         if (selected_ticket === "Concession"){
-            price = 16;
+            price = 12;
         }
         if (selected_ticket === "Family"){
-            price = 16;
+            price = 45;
         }
         if (selected_ticket === "Sands Rewards Member (Adult)"){
-            price = 16;
+            price = 13.3;
         }
         if (selected_ticket === "Sands Rewards Member (Concession)"){
-            price = 16;
+            price = 9.8;
         }
     }
     if (eventName==="Radical Curiosity") {
@@ -34,16 +35,16 @@
             price = 16;
         }
         if (selected_ticket === "Concession"){
-            price = 16;
+            price = 12;
         }
         if (selected_ticket === "Family"){
-            price = 16;
+            price = 45;
         }
         if (selected_ticket === "Sands Rewards Member (Adult)"){
-            price = 16;
+            price = 13.3;
         }
         if (selected_ticket === "Sands Rewards Member (Concession)"){
-            price = 16;
+            price = 9.8;
         }
     }
     if (eventName==="Hope From Chaos") {
@@ -51,10 +52,10 @@
             price = 6;
         }
         if (selected_ticket === "Concession"){
-            price = 16;
+            price = 6;
         }
         if (selected_ticket === "Family"){
-            price = 16;
+            price = 18;
         }
         if (selected_ticket === "Sands Rewards Member (Adult)"){
             price = "Please choose a valid category";
@@ -66,19 +67,19 @@
     }
     if (eventName==="Attack On Titans") {
         if (selected_ticket === "Adult"){
-            price = 16;
+            price = 18;
         }
         if (selected_ticket === "Concession"){
-            price = 16;
+            price = 14;
         }
         if (selected_ticket === "Family"){
-            price = 16;
+            price = 50;
         }
         if (selected_ticket === "Sands Rewards Member (Adult)"){
-            price = 16;
+            price = 14.7;
         }
         if (selected_ticket === "Sands Rewards Member (Concession)"){
-            price = 16;
+            price = 11.2;
         }
         
     }
@@ -102,5 +103,6 @@
     else {
         document.getElementById('ticket-display').style.display='block';
         document.getElementById('ticket-pic').src = pic.replace('90x90', '225x225');
+        document.getElementById("event-date").innerHTML = "Scheduled for " + date.toString();
     }    
 }
