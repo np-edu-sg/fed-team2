@@ -7,7 +7,7 @@ export const Card = {
     `,
     computed: {
         containerClass: ({animated, fluid}) => {
-            let s = ["bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"]
+            let s = ["bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 overflow-hidden"]
             if (animated)
                 s.push("duration-200 ease-out hover:scale-105")
             if (fluid)

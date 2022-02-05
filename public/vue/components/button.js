@@ -1,11 +1,22 @@
 export const Button = {
     //language=HTML
     template: `
-        <button :class="buttonClass" @click="click">
+        <button :class="buttonClass" @click="click" :type="type">
             <slot></slot>
         </button>
     `,
-    props: ['href', 'color'],
+    props: {
+        'href': {
+            type: String
+        },
+        'color': {
+            type: String
+        },
+        'button': {
+            type: String,
+            default: 'button'
+        }
+    },
     methods: {
         click() {
             if (this.href) window.location.href = this.href
