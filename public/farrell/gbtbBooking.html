@@ -4,6 +4,7 @@
     <meta name="author" content="Fun Gao Wei,Farrell"/>
     <meta name="description" content="FED_Assignment_S10222081"/>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gardens By the Bay Booking Form</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +20,7 @@
     <p class="text-center text-5xl">Gardens by the Bay Booking Form</p>
 </div>
 <div class="container mx-auto">
-    <fieldset class="p-3 mx-5 rounded-lg border-2 border-purple-400 border-solid bg-purple-200/[.4] form ">
+    <fieldset class="md:p-3 md:mx-5 rounded-lg border-2 border-purple-400 border-solid bg-purple-200/[.4] form ">
         <legend>Booking form</legend>
         <form onsubmit="showFinalMessage(); return false" onreset="clearMessage()">
             <fieldset class="p-5 mx-5 rounded-lg border-2 border-fuchsia-500 form">
@@ -41,7 +42,7 @@
                 <label for="customer_street_no" class="inline-block w-32 customer_street_no">Street Number:</label>
                 <input id="customer_street_no" type="text" placeholder="Enter Your Street No."
                        class="mb-3 border border-black" pattern="[\d\s]{1,}" required>
-                <label for="customer_street_name" class="inline-block w-24 customer_street_name">Street
+                <label for="customer_street_name" class="inline-block w-32 md:w-24 customer_street_name">Street
                     Name:</label>
                 <input id="customer_street_name" type="text" placeholder="Enter Your Street Name"
                        class="mb-3 border border-black" pattern="[A-Za-z\s]+" required>
@@ -49,7 +50,7 @@
                 <label for="customer_unit_no" class="inline-block w-32 customer_unit_no">Unit Number:</label>
                 <input id="customer_unit_no" type="text" placeholder="Enter Your Unit No."
                        class="mb-3 border border-black" pattern="#\d+-\d+">
-                <label for="customer_postal_code" class="inline-block w-24 customer_postal_code">Postal
+                <label for="customer_postal_code" class="inline-block w-32 md:w-24 customer_postal_code">Postal
                     Code:</label>
                 <input id="customer_postal_code" type="text" placeholder="Enter Your Postal Code"
                        class="mb-3 border border-black" maxlength="6" pattern="\d{6}" required>
@@ -57,12 +58,12 @@
             <br>
             <fieldset class="p-5 mx-5 rounded-lg border-2 border-fuchsia-500 form">
                 <legend>Booking Details</legend>
-                <label for="book-date" class="inline-block w-2/6 book-date">Booking Date (Up to 1 month in
+                <label for="book-date" class="inline-block md:w-2/6 book-date">Booking Date (Up to 1 month in
                     advance):</label>
                 <input id="book-date" type="date" name="date" class="inline-block mb-3 border border-black"
                        required>
                 <br>
-                <label for="book-ticket" class="inline-block w-2/6 book-ticket">Ticket type (Valid until 23:59 of the
+                <label for="book-ticket" class="inline-block md:w-2/6 book-ticket">Ticket type (Valid until 23:59 of the
                     booking date):</label>
                 <select id="book-ticket" class="mb-3 border border-black">
                     <option disabled selected>Please Select a Ticket</option>
@@ -74,13 +75,12 @@
 
                 </select>
                 <br>
-                <label for="book-adults" class="inline-block w-2/6 book-adults">Number of Adult Tickets (Up to 5,
+                <label for="book-adults" class="inline-block md:w-2/6 book-adults">Number of Adult Tickets (Up to 5,
                     Minimum of 1):</label>
                 <input id="book-adults" type="number" value="1" min="1" max="5" class="mb-3 border border-black"
                        required>
                 <br>
-                <label for="book-children" class="inline-block w-2/6 book-children">Number of Children Tickets (Up
-                    to
+                <label for="book-children" class="inline-block md:w-2/6 book-children">Number of Children Tickets (Up to
                     5):</label>
                 <input id="book-children" type="number" value="0" min="0" max="5" class="mb-3 border border-black"
                        required>
