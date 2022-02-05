@@ -4,6 +4,7 @@
     <meta name="author" content="Fun Gao Wei,Farrell"/>
     <meta name="description" content="FED_Assignment_S10222081"/>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gardens By the Bay</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +23,7 @@
 <div class="container mx-auto">
     <div class="flex justify-center w-full">
         <a href="https://www.gardensbythebay.com.sg/en.html" target="blank">
-            <img src="media/gardens_by_the_bay_logo.jpg" alt="gbtb_logo" class="h-[200px]">
+            <img src="media/gardens_by_the_bay_logo.jpg" alt="gbtb_logo" class="h-[200px] w-full md:w-[358.2px]">
         </a>
     </div>
     <br>
@@ -42,39 +43,39 @@
 <br>
 
 <!--Buttons wip-->
-<div class="mx-10">
+<div class="md:mx-10">
     <table class="table table-cols-5 mx-auto">
         <tr>
             <td class="mx-auto">
-                <button class="bg-blue-300 hover:bg-blue-400 px-5 rounded-md mx-auto"
+                <button class="px-1 bg-fuchsia-300 hover:bg-fuchsia-400 md:px-5 rounded-md mx-auto"
                         onclick="flower_dome_button()"
                         id="flower-dome">
                     Flower Dome
                 </button>
 
             <td class="mx-auto">
-                <button class="bg-blue-300 hover:bg-blue-400 px-5 rounded-md mx-auto"
+                <button class="px-1 bg-fuchsia-300 hover:bg-fuchsia-400 md:px-5 rounded-md mx-auto"
                         onclick="cloud_forest_button()"
                 >
                     Cloud Forest
                 </button>
             </td>
             <td class="mx-auto">
-                <button class="bg-blue-300 hover:bg-blue-400 px-5 rounded-md mx-auto"
+                <button class="px-1 bg-fuchsia-300 hover:bg-fuchsia-400 md:px-5 rounded-md mx-auto"
                         onclick="floral_fantasy_button()"
                 >
                     Floral Fantasy
                 </button>
             </td>
             <td class="mx-auto">
-                <button class="bg-blue-300 hover:bg-blue-400 px-5 rounded-md mx-auto"
+                <button class="px-1 bg-fuchsia-300 hover:bg-fuchsia-400 md:px-5 rounded-md mx-auto"
                         onclick="skyway_button()"
                 >
                     OCBC Skyway
                 </button>
             </td>
             <td class="mx-auto">
-                <button class="bg-blue-300 hover:bg-blue-400 px-5 rounded-md mx-auto"
+                <button class="px-1 bg-fuchsia-300 hover:bg-fuchsia-400 md:px-5 rounded-md mx-auto"
                         onclick="observatory_button()"
                 >
                     Supertree Observatory
@@ -83,16 +84,14 @@
         </tr>
     </table>
 </div>
-
+<br>
 <!--Attraction details-->
 <div class="container mx-auto">
-    <div class="mx-10 rounded-lg">
-        <br>
+    <div class="md:mx-10 rounded-lg">
         <p class="mx-auto text-5xl text-center">Attractions</p>
-        <div class="container grid grid-cols-1 p-5 mx-auto md:grid-cols-2 bg-gradient-to-t from-[#d6a9d8]/[.4] to-[#d6a9d8]/25 rounded-lg"
-        >
+        <div class="container grid grid-cols-1 p-5 mx-auto  md:grid-cols-2 bg-gradient-to-t from-[#d6a9d8]/[.4] to-[#d6a9d8]/25 rounded-lg">
             <div class="flex flex-col justify-center items-center">
-                <a class="mx-auto"
+                <a class="ml-auto md:mx-auto"
                    href="https://www.gardensbythebay.com.sg/en/things-to-do/attractions/flower-dome.html"
                    target="_blank">
                     <img src="media/flower_dome.jpg" alt="flower_dome" width="480"
@@ -102,14 +101,14 @@
                 <p class="text-center">Click the image for more information.
                     <br>
                     Image source:
-                    <a class="text-blue-600 hover:text-blue-400 hover:underline"
+                    <a class="text-blue-600 hover:text-blue-400 hover:underline break-all"
                        href="https://www.singaporeflowersflorists.com/2020/04/flower-dome-in-singapore-at-gardens-by-the-bay.html"
                        target="_blank">
                         https://www.singaporeflowersflorists.com/2020/04/flower-dome-in-singapore-at-gardens-by-the-bay.html</a>
                 </p>
             </div>
 
-            <div class="border border-slate-700/25 text-right p-[60px] m-[69.8px]">
+            <div class="border border-slate-700/25 text-left md:text-right p-1 m-1 md:p-[60px] md:m-[69.8px]1 md:p-[60px] md:m-[69.8px]">
                 <p class="text-4xl">Flower Dome</p>
                 <p class="text-lg"> The cavernous cooled conservatory contains over 5 different regional gardens encased
                     in
@@ -120,7 +119,7 @@
         <hr class="my-14" id="cloud-forest">
 
         <div class="container grid grid-cols-1 p-5 mx-auto md:grid-cols-2 bg-gradient-to-t from-[#d6a9d8]/[.55] to-[#d6a9d8]/[.4] rounded-lg">
-            <div class="inline-block border border-slate-700/25 align-middle  p-[60px] m-[69.8px]">
+            <div class="border border-slate-700/25 p-1 m-1 md:p-[60px] md:m-[69.8px]]">
                 <p class="text-4xl">Cloud Forest</p>
                 <p class="text-lg"> Peek into the clouds and explore the plethora of exotic plant species
                     inside one of the world's largest indoor waterfalls accompanied by a lush mountain.</p>
@@ -135,7 +134,7 @@
                 <p class="text-center">Click the image for more information.
                     <br>
                     Image source:
-                    <a class="text-blue-600 hover:text-blue-400 hover:underline"
+                    <a class="text-blue-600 hover:text-blue-400 hover:underline break-all"
                        href="https://matadornetwork.com/read/singapore-gardens-by-the-bay/" target="_blank">
                         https://matadornetwork.com/read/singapore-gardens-by-the-bay/</a>
                 </p>
@@ -154,13 +153,13 @@
                 <p class="text-center">Click the image for more information.
                     <br>
                     Image source:
-                    <a class="text-blue-600 hover:text-blue-400 hover:underline"
+                    <a class="text-blue-600 hover:text-blue-400 hover:underline break-all"
                        href="https://girlstyle.com/sg/article/78396/floral-fantasy-gardens-by-the-bay"
                        target="_blank">
                         https://girlstyle.com/sg/article/78396/floral-fantasy-gardens-by-the-bay </a>
                 </p>
             </div>
-            <div class="border border-slate-700/25 text-right p-[60px] m-[69.8px]">
+            <div class="border border-slate-700/25 text-left md:text-right p-1 m-1 md:p-[60px] md:m-[69.8px]">
                 <p class="text-4xl">Floral Fantasy</p>
                 <p class="text-lg"> A stone's throw from Bayfront MRT station, Floral Fantasy offers a magical escape
                     among
@@ -175,7 +174,7 @@
         <hr class="my-14" id="ocbc-skyway">
         <div class="container grid grid-cols-1 p-5 mx-auto md:grid-cols-2 bg-gradient-to-t from-[#d6a9d8]/[.85] to-[#d6a9d8]/[.7] rounded-lg"
         >
-            <div class="border border-slate-700/25 p-[60px] m-[69.8px]">
+            <div class="border border-slate-700/25 p-1 m-1 md:p-[60px] md:m-[69.8px]">
                 <p class="text-4xl">OCBC Skyway</p>
                 <p class="text-lg"> Enjoy the most enthralling views on the OCBC Skyway. Suspended
                     between two Supertrees at 22 metres above ground, this 128m-long aerial walkway offers marvellous
@@ -193,7 +192,7 @@
                 <p class="text-center">Click the image for more information.
                     <br>
                     Image source:
-                    <a class="text-blue-600 hover:text-blue-400 hover:underline"
+                    <a class="text-blue-600 hover:text-blue-400 hover:underline break-all"
                        href="https://inspitrip.com/vi-VN/experiences/combo-marina-gardens-by-the-bay-marina-bay-sands-skypark-artscience-museum-1131"
                        target="_blank">
                         https://inspitrip.com/vi-VN/experiences/combo-marina-gardens-by-the-bay-marina-bay-sands-skypark-artscience-museum-1131
@@ -214,13 +213,13 @@
                 <p class="text-center">Click the image for more information.
                     <br>
                     Image source:
-                    <a class="text-blue-600 hover:text-blue-400 hover:underline"
+                    <a class="text-blue-600 hover:text-blue-400 hover:underline break-all"
                        href="https://thesmartlocal.com/read/things-to-do-january-2020/" target="_blank">
                         https://thesmartlocal.com/read/things-to-do-january-2020/
                     </a>
                 </p>
             </div>
-            <div class="border border-slate-700/25 text-right p-[60px] m-[69.8px]">
+            <div class="border border-slate-700/25 p-1 m-1 md:p-[60px] md:m-[69.8px]">
                 <p class="text-4xl">Supertree Observatory</p>
                 <p class="text-lg"> Get your cameras ready! Located at the tallest Supertree's canopy,
                     the Supertree Observatory offers unparalleled views of Gardens by the Bay's lush surrounds and the
@@ -234,15 +233,15 @@
 <!--Image Carousel-->
 <div class="slideshow-container" onload="showSlides()">
     <div class="mySlides fade">
-        <img src="media/slideshow_1.jpg" style="height: 500px">
+        <img src="media/slideshow_1.jpg" style="width: 100%">
         <div class="text">Gardens By The Bay in the Day</div>
     </div>
     <div class="mySlides fade">
-        <img src="media/slideshow_2.jpg" style="height: 500px; width:1000px">
+        <img src="media/slideshow_2.jpg" style="width:100%">
         <div class="text">Gardens By The Bay at Night on the ground</div>
     </div>
     <div class="mySlides fade">
-        <img src="media/slideshow_3.jpg" style="height: 500px; width:1000px">
+        <img src="media/slideshow_3.jpg" style="width:100%">
         <div class="text">Gardens By The Bay at Night in the sky</div>
     </div>
     <script>
@@ -266,38 +265,38 @@
 </div>
 <br>
 <!--Ticket price table-->
-<div class="container mx-auto">
-    <table class="table mx-10 border-2 border-collapse table-fixed">
+<div class="container mx-auto md:px-10">
+    <table class="table border-2 border-collapse table-fixed justify-between overflow-x-scroll w-full">
         <caption class="table-caption">Ticket Description</caption>
         <tr class="table-row text-center text-lg">
-            <td class="table-cell px-16 border-2 border-fuchsia-700">Ticket Type</td>
-            <td class="table-cell px-16 border-2 border-fuchsia-700">Price(Adult)</td>
-            <td class="table-cell px-16 border-2 border-fuchsia-700">Price(Child)</td>
+            <td class="table-cell md:px-16 border-2 border-fuchsia-700">Ticket Type</td>
+            <td class="table-cell md:px-16 border-2 border-fuchsia-700">Price(Adult)</td>
+            <td class="table-cell md:px-16 border-2 border-fuchsia-700">Price(Child)</td>
         </tr>
         <tr class="table-row text-center">
-            <td class="table-cell px-16 w-1/6 align-middle border-2 border-fuchsia-700">Flower Dome</td>
-            <td class="table-cell px-16 w-1/6 align-middle border-2 border-fuchsia-700">SGD 11.00</td>
-            <td class="table-cell px-16 w-1/6 align-middle border-2 border-fuchsia-700">SGD 7.50</td>
+            <td class="table-cell md:px-16 w-1/6 align-middle border-2 border-fuchsia-700">Flower Dome</td>
+            <td class="table-cell md:px-16 w-1/6 align-middle border-2 border-fuchsia-700">SGD 11.00</td>
+            <td class="table-cell md:px-16 w-1/6 align-middle border-2 border-fuchsia-700">SGD 7.50</td>
         </tr>
         <tr class="table-row text-center">
-            <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">Cloud Forest</td>
-            <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">SGD 11.00</td>
-            <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">SGD 7.50</td>
+            <td class="table-cell md:px-16 align-middle border-2 border-fuchsia-700">Cloud Forest</td>
+            <td class="table-cell md:px-16 align-middle border-2 border-fuchsia-700">SGD 11.00</td>
+            <td class="table-cell md:px-16 align-middle border-2 border-fuchsia-700">SGD 7.50</td>
         </tr>
         <tr class="table-row text-center">
-            <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">Floral Fantasy</td>
-            <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">SGD 9.00</td>
-            <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">SGD 5.50</td>
+            <td class="table-cell md:px-16 align-middle border-2 border-fuchsia-700">Floral Fantasy</td>
+            <td class="table-cell md:px-16 align-middle border-2 border-fuchsia-700">SGD 9.00</td>
+            <td class="table-cell md:px-16 align-middle border-2 border-fuchsia-700">SGD 5.50</td>
         </tr>
         <tr class="table-row text-center">
-            <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">OCBC Skyway</td>
-            <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">SGD 7.00</td>
-            <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">SGD 4.50</td>
+            <td class="table-cell md:px-16 align-middle border-2 border-fuchsia-700">OCBC Skyway</td>
+            <td class="table-cell md:px-16 align-middle border-2 border-fuchsia-700">SGD 7.00</td>
+            <td class="table-cell md:px-16 align-middle border-2 border-fuchsia-700">SGD 4.50</td>
         </tr>
         <tr class="table-row text-center">
-            <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">Supertree Observatory</td>
-            <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">SGD 9.50</td>
-            <td class="table-cell px-16 align-middle border-2 border-fuchsia-700">SGD 5.50</td>
+            <td class="table-cell md:px-16 align-middle border-2 border-fuchsia-700">Supertree Observatory</td>
+            <td class="table-cell md:px-16 align-middle border-2 border-fuchsia-700">SGD 9.50</td>
+            <td class="table-cell md:px-16 align-middle border-2 border-fuchsia-700">SGD 5.50</td>
         </tr>
     </table>
 </div>
