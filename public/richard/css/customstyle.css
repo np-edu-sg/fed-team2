@@ -1,141 +1,233 @@
 html {
-    scroll-behavior: smooth;
-  }
+  scroll-behavior: smooth;
+}
 
-  .starter1 {
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+.starter1 {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.starter2 {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.box span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: arrow-down 2s infinite;
+}
+
+.box span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.box span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+@keyframes arrow-down {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px,-20px);
   }
-  
-  .starter2 {
-    position: absolute;
-    top: 42%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-  }
-  
-  .box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-  }
-  
-  .box span {
-    display: block;
-    width: 20px;
-    height: 20px;
-    border-bottom: 1px solid #fff;
-    border-right: 1px solid #fff;
-    transform: rotate(45deg);
-    margin: -10px;
-    animation: arrow-down 2s infinite;
-  }
-  
-  .box span:nth-child(2) {
-    animation-delay: -0.2s;
-  }
-  
-  .box span:nth-child(3) {
-    animation-delay: -0.4s;
-  }
-  
-  @keyframes arrow-down {
-    0% {
-      opacity: 0;
-      transform: rotate(45deg) translate(-20px,-20px);
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-      transform: rotate(45deg) translate(20px,20px);
-    }
-  }
-  
-  .intro {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-  }
-  
-  .intro .wave {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: url("../src/img/waveBv2.png");
-    background-size: 1000px 100px;
-  }
-  
-  .intro .wave.wave1 {
-    animation: animate 30s linear infinite;
-    z-index: 1000;
+  50% {
     opacity: 1;
-    animation-delay: 0s;
-    bottom: 0;
   }
-  
-  .intro .wave.wave2 {
-    animation: animate2 15s linear infinite;
-    z-index: 999;
-    opacity: 0.5;
-    animation-delay: -5s;
-    bottom: 10px;
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px,20px);
   }
-  
-  .intro .wave.wave3 {
-    animation: animate2 15s linear infinite;
-    z-index: 998;
-    opacity: 0.2;
-    animation-delay: -2s;
-    bottom: 15px;
+}
+
+.intro {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.intro .wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("../img/waveBv2.png");
+  background-size: 1000px 100px;
+}
+
+.intro .wave.wave1 {
+  animation: animate 30s linear infinite;
+  z-index: 1000;
+  opacity: 1;
+  animation-delay: 0s;
+  bottom: 0;
+}
+
+.intro .wave.wave2 {
+  animation: animate2 15s linear infinite;
+  z-index: 999;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 10px;
+}
+
+.intro .wave.wave3 {
+  animation: animate2 15s linear infinite;
+  z-index: 998;
+  opacity: 0.2;
+  animation-delay: -2s;
+  bottom: 15px;
+}
+
+.intro .wave.wave4 {
+  animation: animate2 5s linear infinite;
+  z-index: 997;
+  opacity: 0.2;
+  animation-delay: -2s;
+  bottom: 20px;
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: 0;
   }
-  
-  .intro .wave.wave4 {
-    animation: animate2 5s linear infinite;
-    z-index: 997;
-    opacity: 0.2;
-    animation-delay: -2s;
-    bottom: 20px;
+  100% {
+    background-position-x: 1000px;
   }
-  
-  @keyframes animate {
-    0% {
-      background-position-x: 0;
-    }
-    100% {
-      background-position-x: 1000px;
-    }
+}
+
+@keyframes animate2 {
+  0% {
+    background-position-x: 0;
   }
-  
-  @keyframes animate2 {
-    0% {
-      background-position-x: 0;
-    }
-    100% {
-      background-position-x: -1000px;
-    }
+  100% {
+    background-position-x: -1000px;
   }
-  
-  #rides-attractions {
-    background: #0000ff;
-  }
-  
-  img .pics{
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-  }
-  
-  .logo {
-    width: auto;
-    height: auto;
-  }
-  
-  
+}
+
+img .pics{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.logo {
+  display: inline;
+  width: auto;
+  height: auto;
+}
+
+.overlay-form {
+  position: absolute;
+  top: 50vh;
+  left: 0;
+  width: 100vw;
+  height: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: -1;
+  opacity: 0;
+  padding: 60px 100px;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: top 500ms ease-in-out,
+  opacity 500ms ease-in-out,
+  height 0ms ease-in-out 0ms;
+}
+
+.overlay-form .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-weight: 1000;
+  color: #eee;
+  cursor: pointer;
+}
+
+.overlay-form h1 {
+  font-size: 32px;
+  color: #fff;
+}
+
+.overlay-form p {
+  font-size: 16px;
+  color: #eee;
+  margin: -15px 0 30px;
+}
+
+.overlay-form .form-element {
+  margin: 20px 0;
+}
+
+.overlay-form label {
+  display: block;
+  font-size: 17px;
+  color: #eee;
+  margin-bottom: 5px;
+}
+
+.overlay-form input {
+  width: 100%;
+  padding: 6px;
+  font-size: 17px;
+  border: 2px solid #eee;
+  background: transparent;
+  outline: none;
+  border-radius: 10px;
+}
+
+.overlay-form button,
+.center{
+  margin-top: 10px;
+  width: 100px;
+  height: 35px;
+  font-size: 15px;
+  text-transform: uppercase;
+  background: #fff;
+  color: #222;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center button {
+  width: 150px;
+  height: 40px;
+  font-weight: 600;
+  box-shadow: 3px 3px 2px 1px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+body.activeForm .overlay-form {
+  z-index: 1002;
+  opacity: 1;
+  top: 0;
+  height: 100vh;
+  transition: top 500ms ease-in-out,
+              opacity 500ms ease-in-out,
+              height 0ms ease-in-out 0ms;
+}
