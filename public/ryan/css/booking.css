@@ -77,10 +77,7 @@ label {
 }
 
 table {
-    width: 100%;
-    border: solid black;
-    border-radius: 10px;
-    border-collapse: collapse;
+    border: thin solid black;
 }
 
 th {
@@ -106,8 +103,16 @@ tr, th, td {
 }
 
 .bookingDetails {
+    color: dodgerblue;
+    font-size: 130%;
+    display: inline;
+    font-weight: bold;
+
+}
+
+.noBooking {
     color: red;
-    font-size: 120%;
+    font-size: 130%;
     display: inline;
     font-weight: bold;
 }

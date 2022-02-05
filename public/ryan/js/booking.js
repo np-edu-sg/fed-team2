@@ -18,33 +18,12 @@ nextYear = (yyyy + 1) + '-' + mm + '-' + dd;
 document.getElementById("startDate").setAttribute("min", tomorrow);
 document.getElementById("startDate").setAttribute("max", nextYear);
 
-//function getEndDate() { /*doesnt work needs fixing*/
-//    var startDate = new Date(document.getElementById("startDate").value);
-//    console.log(startDate);
-//    var minEndDay = startDate.getDate() + 1;
-//    var maxEndDay = startDate.getDate() + 8;
-//    var endMonth = startDate.getMonth();
-//    var endYear = startDate.getFullYear();
-
-//    minEndDate = endYear + '-' + endMonth + '-' + minEndDay;
-//    maxEndDate = endYear + '-' + endMonth + '-' + maxEndDay;
-
-//    console.log(minEndDate, maxEndDate);
-
-//    document.getElementById("endDate").setAttribute("min", minEndDate);
-//    document.getElementById("endDate").setAttribute("max", maxEndDate);
-
-//    console.log(document.getElementById("endDate").getAttribute("min"));
-//    console.log(document.getElementById("endDate").getAttribute("max"));
-//}
-
-
 var typePrices = new Array();
 typePrices['Deluxe'] = 400;
 typePrices['Premier'] = 450;
 
 var viewPrices = new Array();
-viewPrices["Lower"] = 0;
+viewPrices["Lower Floor"] = 0;
 viewPrices["City"] = 0;
 viewPrices["Garden"] = 30;
 viewPrices["Harbour"] = 30;
@@ -68,33 +47,67 @@ function getDetails() {
     price += bedPrices[roomBed];
     price *= nights;
 
+    document.getElementById("noBooking").innerHTML = null;
     document.getElementById("typeDetails").innerHTML = "Room Type: " + roomType;
     document.getElementById("viewDetails").innerHTML = "Room View: " + roomView;
     document.getElementById("priceDetails").innerHTML = "Price: $" + price;
 
 }
 
-function displayDate() {
 
+
+function submitForm() {
     var nights = document.getElementById("nights").value;
     var bookDate = new Date(document.getElementById("startDate").value);
     var bookDay = bookDate.getDate();
     var endDay = bookDate.getDate() + parseInt(nights);
-    var bookMonth = bookDate.getMonth();
+    var bookMonth = bookDate.getMonth() + 1;
     var bookYear = bookDate.getFullYear();
-    console.log(bookDay, endDay);
+
+    daysInMonth = new Date(bookYear, bookMonth, 0).getDate();
+
+    if (bookDay < 10) {
+        bookDay = '0' + bookDay;
+    }
+
+    if (endDay < 10) {
+        endDay = '0' + endDay;
+    }
+
+    if (bookMonth < 10) {
+        bookMonth = '0' + bookMonth;
+    }
+
     confirmBookDate = bookYear + '-' + bookMonth + '-' + bookDay;
     endBookDate = bookYear + '-' + bookMonth + '-' + endDay;
 
-    document.getElementById("dateDetails").innerHTML = "Your stay will be from " + confirmBookDate + " to " + endBookDate;
 
-}
-function submitForm() {
-
-    var custName = document.getElementById("name").value;
-    document.getElementById("customerDetails").innerHTML = "Booking successful. Thank you for your booking, Mr/Mrs. " + custName + ".";
-
+    if (endDay > daysInMonth) {
+        endBookDate = bookYear + '-' + (bookMonth+1) + '-' + (endDay-daysInMonth);
+    }
     
+    var confirmMsg = confirm("Do you want to confirm your booking?");
+    if (confirmMsg == true) {
+
+        document.getElementById("dateDetails").innerHTML = "Your stay will be from " + confirmBookDate + " to " + endBookDate + ".";
+
+        var custName = document.getElementById("name").value;
+        document.getElementById("customerDetails").innerHTML = "Booking successful! Thank you for your booking, " + custName + ".";
+        document.getElementById("roomField").disabled = true;
+        document.getElementById("customerField").disabled = true;
+        document.getElementById("submitButton").disabled = true;
+    }
+}
+
+function resetForm() {
+    document.getElementById("roomField").disabled = false;
+    document.getElementById("customerField").disabled = false;
+    document.getElementById("submitButton").disabled = false;
+    document.getElementById("typeDetails").innerHTML = "No bookings have been made yet.";
+    document.getElementById("viewDetails").innerHTML = null;
+    document.getElementById("priceDetails").innerHTML = null;
+    document.getElementById("dateDetails").innerHTML = null;
+    document.getElementById("customerDetails").innerHTML = null;
 }
 
 

@@ -10,11 +10,12 @@
 | Ryan                   |
 | Tan Yun-E              |
 
-
 ## Project
 
-This project uses Web Components. Please use a compatible browser:
+This project uses ESM to load Vue 3 and Tailwind. Please use a compatible browser:
 
-* Firefox: `> 63`
-* Chromium: `> 79`
-* Safari: Not recommended :)
+* Not IE11
+* Any modern browser
+
+Some pages such as `public/index.html`, `public/qin-guan/index.html` are rendered with Vue. The templates are
+in `public/vue/pages/`.
