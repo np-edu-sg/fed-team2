@@ -1,0 +1,118 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.rides-attractions ul li {
+  list-style-type: none;
+  position: relative;
+  width: 3px;
+  margin: 0 auto;
+  padding-top: 100px;
+  background: #fff;
+}
+.rides-attractions ul li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) rotate(45deg);
+  width: 20px;
+  height: 20px;
+  z-index: 2;
+  background: #eee;
+}
+.rides-attractions ul li div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+.rides-attractions ul li div ra-name {
+  position: absolute;
+  background: #f5af19;
+  width: 350px;
+  height: 30px;
+  top: -15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  align-items: center;
+}
+.rides-attractions ul li div div {
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.rides-attractions ul li div div p {
+  text-align: center;
+}
+.rides-attractions ul li:nth-of-type(odd) > div {
+  left: 45px;
+}
+.rides-attractions ul li:nth-of-type(even) > div {
+  left: -439px;
+}
+
+.rides-attractions ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.rides-attractions ul li:nth-of-type(odd) div {
+  transform: translate3d(100px, -10px, 0) rotate(10deg);
+}
+.rides-attractions ul li:nth-of-type(even) div {
+  transform: translate3d(-100px, -10px, 0) rotate(10deg);
+}
+.rides-attractions ul li.in-view div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 900px) {
+  .rides-attractions ul li div {
+    width: 250px;
+    flex-direction: column;
+  }
+  .rides-attractions ul li div div {
+    width: 80%;
+    margin: 10px;
+  }
+  .rides-attractions ul li:nth-of-type(even) > div {
+    left: -289px;
+  }
+}
+@media screen and (max-width: 600px) {
+  body {
+    background: #8bfff4;
+  }
+
+  .rides-attractions ul li {
+    margin-left: 20px;
+  }
+  .rides-attractions ul li div {
+    width: calc(100vw - 91px);
+  }
+  .rides-attractions ul li:nth-of-type(even) > div {
+    left: 45px;
+  }
+}
+.long-pic {
+  width: 280px;
+  height: 200px;
+}
+
+/*# sourceMappingURL=rides-attractions.css.map */
