@@ -2,6 +2,11 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .starter1 {
   position: absolute;
   top: 35%;
@@ -208,8 +213,7 @@ img .pics{
 }
 
 .center {
-  position: absolute;
-  top: 50%;
+  position: relative;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -230,4 +234,8 @@ body.activeForm .overlay-form {
   transition: top 500ms ease-in-out,
               opacity 500ms ease-in-out,
               height 0ms ease-in-out 0ms;
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
 }
