@@ -4,7 +4,15 @@ const links = {
     "Qin Guan": ["i am a reference"],
     "Yun-E": ["i am a reference"],
     "Richard": ["i am a reference"],
-    "Ryan": ["i am a reference"],
+    "Ryan": ["https://www.tripadvisor.com/Hotel_Review-g294265-d1770798-Reviews-Marina_Bay_Sands-Singapore.html",
+"https://www.visitsingapore.com/see-do-singapore/recreation-leisure/resorts/marina-bay-sands",
+"https://www.cntraveler.com/activities/singapore/marina-bay-sands-skypark",
+"https://www.booking.com/hotel/sg/marina-bay-sands.html",
+"https://www.safdiearchitects.com/projects/marina-bay-sands-hotel-and-skypark",
+"https://en.wikipedia.org/wiki/Marina_Bay_Sands#/media/File:Marina_Bay_Sands_logo.svg",
+"https://www.marinabaysands.com/booking/rooms.html?CheckinDate=2022-02-01&LOS=1&Rooms=1&Adults_1=1&Children_1=0&locale=en&offerCode=&flow=tf&Currency=SGD&multi=false",
+"https://www.marinabaysands.com/shopping.html",
+"https://www.gardensbythebay.com.sg/"],
 }
 
 export const Credits = {
