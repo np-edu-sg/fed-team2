@@ -1,46 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/customstyle.css">
+    <link rel="stylesheet" href="css/rides-attractions.css">
     <script type="module" src="../vue/index.js"></script>
 </head>
+
 <body class="bg-blue-900">
-    <div id="header"></div>
-    <section class="bg-blue-300 intro">
-        <div class="text-5xl absolute top-[35%] left-[50%] translate-x-[-50%] translate-y-[-50%]">READY TO SPLASH?</div>
-        <div class="text-xl absolute top-[42%] left-[50%] translate-x-[-50%] translate-y-[-50%]">SCROLL DOWN FOR MORE INFORMATION</div>
-        <div class="box"><span onclick="location='#rides-attractions'"></span><span onclick="location='#rides-attractions'"></span><span onclick="location='#rides-attractions'"></span></div>
-        <div class="wave wave1"></div>
-        <div class="wave wave2"></div>
-        <div class="wave wave3"></div>
-        <div class="wave wave4"></div>
-    </section>
-    <section class="bg-blue-900">
-        <div class="mx-auto text-white">WATER PARK RIDES & ATTRACTIONS</div>
-        <div class="mx-auto md:container">
-            <div class="space-y-4 md:columns-3 max-w-fit">
-                <img class="object-cover h-[500px] rounded w-[500px]" src="img/freefallwaterslides.jpg" alt="">
-                <img class="object-cover h-[500px] rounded w-[500px]" src="img/giantspinningwaterslide.jpg" alt="">
-                <img class="object-cover h-[500px] rounded w-[500px]" src="img/jacuzzipooloutdoorspa.jpg" alt="">
-                <img class="object-cover h-[500px] rounded w-[500px]" src="img/kidzone.jpg" alt="">
-                <img class="object-cover h-[500px] rounded w-[500px]" src="img/krakenrace.jpg" alt="">
-                <img class="object-cover h-[500px] rounded w-[500px]" src="img/professor'swaterplayground.jpg" alt="">
-                <img class="object-cover h-[500px] rounded w-[500px]" src="img/royalflush.jpg" alt="">
-                <img class="object-cover h-[500px] rounded w-[500px]" src="img/shiokriver.jpg" alt="">
-                <img class="object-cover h-[500px] rounded w-[500px]" src="img/slideup.jpg" alt="">
-                <img class="object-cover h-[500px] rounded w-[500px]" src="img/splashplaykiddieswimmingpool.png" alt="">
-                <img class="object-cover h-[500px] rounded w-[500px]" src="img/torpedo.jpg" alt="">
-                <img class="object-cover h-[500px] rounded w-[500px]" src="img/tsunami.jpg" alt="">
-                <img class="object-cover h-[500px] rounded w-[500px]" src="img/ularulah.jpg" alt="">
-                <img class="object-cover h-[500px] rounded w-[500px]" src="img/vortex.jpg" alt="">
-                <img class="object-cover h-[500px] rounded w-[500px]" src="img/yippie!.jpg" alt="">
+<div id="header"></div>
+<section class="relative bg-blue-300 intro">
+    <div class="container mx-auto absolute top-[30%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center">
+        <img class="logo" src="img/www-wp-logo.png" alt="">
+        <h1>READY TO SPLASH?</h1>
+        <h1>SCROLL DOWN FOR MORE INFORMATION</h1>
+    </div>
+    <div class="box"><span onclick="location='#rides-attractions'"></span><span onclick="location='#rides-attractions'"></span><span onclick="location='#rides-attractions'"></span></div>
+    <div class="wave wave1"></div>
+    <div class="wave wave2"></div>
+    <div class="wave wave3"></div>
+    <div class="wave wave4"></div>
+</section>
+<section class="rides-attractions" id="rides-attractions">
+    <div class="m-10 text-2xl font-bold text-center text-white">WATER PARK RIDES & ATTRACTIONS</div>
+    <ul>
+        <li>
+            <div>
+                <ra-name>FREE FALL WATER SLIDES</ra-name>
+                <div class="pics desc">
+                    <img class="object-cover" src="img/freefallwaterslides.jpg" alt="">
+                    <p>Challenge yourself in this adrenaline-rushing experience. Take the plunge down a near-vertical drop at speeds of up to 50 feet per second on one of Asia's longest free fall water slides.<br><br>Bring your game on and experience
+                        this fast and extreme attraction for yourself! You will barely have time to scream as you go on this&nbsp;thrilling water slide&nbsp;and end with a big splash.</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </li>
+        <li>
+            <div>
+                <ra-name>JACUZZI POOL &amp; OUTDOOR SPA</ra-name>
+                <div class="pics desc">
+                    <img class="object-cover" src="img/jacuzzipooloutdoorspa.jpg" alt="">
+                    <p>Fluid jets to rub and ease the kinks in your muscles plus a bubbly massage that soothes your aches in this pool with a jacuzzi waterfall.Unwind, stop and catch your breath in the big jacuzzi pool, our answer to tired bodies in
+                        need of recharging - it can even be the centre of a family event!<br><br>So choose a nice spot, sit back and let the water do its work. Literally.</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <ra-name>KIDZ ZONE WATER THEME PARK</ra-name>
+                <div class="pics desc">
+                    <img class="object-cover" src="img/kidzone.jpg" alt="">
+                    <p>Give the young ones a taste of a wilder world at the all-new kids' water paradise, filled with exhilarating pint-sized versions of the big rides such as Royal Flush and Kraken Racers, designed to provide maximum entertainment to
+                        the little ones.<br><br>Our&nbsp;exciting outdoor wet play area is great as a children's activities play area, suitable for toddlers and children of all ages to frolic around in a safe and fun environment. Have a fantastic
+                        water park experience with your tiniest members of the family</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <ra-name>KRAKEN RACERS GIANT WATER SLIDES</ra-name>
+                <div class="pics desc">
+                    <img class="object-cover" src="img/krakenrace.jpg" alt="">
+                    <p>Fear the kraken!<br><br>Feel the adrenaline as you zip down the slide lanes on Singapore's first four-lane mat racer giant water slide. Bring competitive thrill to a whole new level and experience the extreme thrill of high speed
+                        large water slides.<br><br>This multi-lane racer is one of the popular water slides in Singapore. Grab a blue mat, climb the stairs up 12 metres and zip down the water slippery slide in friendly competition with your family
+                        and friends!</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <ra-name>PROFESSOR'S PLAYGROUND</ra-name>
+                <div class="pics desc">
+                    <img class="object-cover" src="img/professor'swaterplayground.jpg" alt="">
+                    <p>Let your kids slide and swing the splashy style in Professor's Playground!<br><br>Designed around the theme of an experimental laboratory, this outdoor water slide playground packs a myriad of classic fixtures such as slides, ladders,
+                        water cannons and even water fountains.<br><br>At a comfortable depth of 0.3 metres, it's safe even for the most zealous child keen on exploring and taking charge of his/her surroundings in this water park playground with family
+                        water slides suitable for toddler of all ages. One thing's for sure, playing in the water has never been this fun!</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <ra-name>ROYAL FLUSH WATER RAFTING TUNNEL SLIDE</ra-name>
+                <div class="desc">
+                    <img class="object-cover long-pic" src="img/royalflush.jpg" alt="">
+                    <p>Experience Asia's first hybrid ride featuring both the Behemoth BOWL40 and TornadoWAVE rides in one!&nbsp;The orange-and-yellow attraction combines a bowl and a zero-gravity wall in one ride.<br><br>Gather a group of four on this
+                        splashing water slide, sit on a raft, as you drop into the enormous bowl and slide down the curves at manic speeds,&nbsp;swooshing up a wall and down a tunnel. Holler your lungs out on our water park raft ride as you drop into
+                        the ginormous bowl and get ready for the flush! This ride is also a great choice for a family raft ride.</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <ra-name>SHIOK RIVER LONG SWIMMING POOL</ra-name>
+                <div class="pics desc">
+                    <img class="object-cover" src="img/shiokriver.jpg" alt="">
+                    <p style="font-size: 15px;">Spanning 335 metres in length, Shiok River skirts the perimeter of the park like an outdoor swimming pool, meandering through a variety of lush landscape that will leave you soothed and invigorated. Take a breather, go with the
+                        flow and let the trip wash away your care. It's a great way to escape from all the commotion and noise of everyday life.<br><br>Tubes are optional for those who prefer to travel at their own pace. You can snooze your way through
+                        a dream-filled journey in this long pool that will last as long as you want. Or take a quick dip to recharge your batteries before plunging into some of our more exciting rides again!</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <ra-name>SPLASH PLAY KIDDIE SWIMMING POOL WITH SPRINKLERS</ra-name>
+                <div class="pics desc">
+                    <img class="object-cover" src="img/splashplaykiddieswimmingpool.png" alt="">
+                    <p>Families with young ones can enjoy the all-new kiddie pool with sprinklers where little ones can slosh around the low water with fun jets and water sprays. This family friendly pool is also equipped with water tunnels, water cannons
+                        and a little play structure in the middle.<br><br>Experience&nbsp;an exciting outdoor kiddie water play area where toddlers and children of all ages can frolic around in a safe and fun family environment. Have a blast with
+                        your tiniest&nbsp;members of the family.</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <ra-name>THE WATER WORK GIANT WATER SLIDE</ra-name>
+                <div class="pics desc">
+                    <img class="object-cover" src="img/giantspinningwaterslide.jpg" alt="">
+                    <br>
+                    <p>This twisty outdoor water slide comes in two parts: open and covered body slides, each with its own unique route and distinctive angles. This outdoor water slide is perfect for friendly races to see who can hit the landing pool
+                        first! Take on the challenge with your family and friends.</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <ra-name>TORPEDO EXTREME THRILL WATER RIDE</ra-name>
+                <div class="pics desc">
+                    <img class="object-cover" src="img/torpedo.jpg" alt="">
+                    <br>
+                    <p style="font-size: 14px;">The first of its kind in Singapore, the all-new Torpedo ride ejects you from an 18-metre high capsule right into a heart-stopping free fall, which propels you straight into a manic trajectory of hair raising twists and turns at
+                        mind-numbing speeds of up to 70km/hr.<br><br>Get set for jaw-dropping, hair raising and adrenalin-pumping adventures on Torpedo Singapore as you drop from six-stories up and go on a 360 degrees loop in this thrilling ride.<br><br>Step
+                        into a launch chamber and wait for the trap door under your feet to open to experience one of the more intense drop slides out there as you plummet down the huge fall and make some tight twists and turns!</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <ra-name>TSUNAMI GIANT WAVE POOL</ra-name>
+                <div class="pics desc">
+                    <img class="object-cover" src="img/tsunami.jpg" alt="">
+                    <br>
+                    <p>Tsunami combines the best of waves and the sea to give you the excitement of the surf under controlled conditions. Without the hassle of choppy swells or dangerous currents, even kids can feel totally at ease in this giant wave
+                        pool.Take your time to enjoy as you lie back, soak up the sun and fun for a guaranteed splashing fun-filled day!<br><br>Our Tsunami swimming pool has a depth of 1.8m at the far end, and it remains one of the more popular wave
+                        pools in Singapore&nbsp;suitable for the entire family.</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <ra-name>VORTEX HIGH SPEED WATER SLIDE</ra-name>
+                <div class="pics desc">
+                    <img class="object-cover long-pic" src="img/vortex.jpg" alt="">
+                    <br>
+                    <p>Get sucked into a world of extreme turns and curves at absolute break-neck speeds! Singapore's first high-speed 360° extreme loops ride will syphon you into a towering maze of turns and curves at breakneck speeds.&nbsp;<br><br>This
+                        enclosed flume ride starts 18 metres above the ground and will take you on twists and turns. This high speed slide will send thrill-seekers splashing down with speeds of up to 600 meters per minute.<br><br>Experience the extreme
+                        thrill of water tunnel slides today!</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+</section>
+<section class="overlay-form" id="overlay-form-richard">
+    <div class="close-btn">&times;</div>
+    <h1 class="uppercase">Book Day Pass Ticket</h1>
+    <div class="form-element">
+        <label for="firstname">First Name</label>
+        <input type="text" id="firstname">
+    </div>
+    <div class="form-element">
+        <label for="lastname">Last Name</label>
+        <input type="text" id="lastname">
+    </div>
+    <div class="form-element">
+        <label for="email">Email</label>
+        <input type="email" id="email">
+    </div>
+    <div class="form-element">
+        <label for="date">Date</label>
+        <input type="date" id="date">
+    </div>
+    <button type="submit">submit</button>
+</section>
 <div id="footer"></div>
 </body>
+<script src="js/animations.js"></script>
+
 </html>
