@@ -1,30 +1,30 @@
-import {computed, reactive} from "https://unpkg.com/vue@3.2.29/dist/vue.esm-browser.prod.js"
+import {computed, reactive, ref, watch} from "https://unpkg.com/vue@3.2.29/dist/vue.esm-browser.prod.js"
 
-const header = ["Ticket Type", "Description", "Adult Price", "Child Price"]
+const header = ["Ticket", "Description", "Adult Price", "Child Price"]
 
 const pricings = {
     "Universal Studios Singapore": [
         [
             `[SG Residents] Mastercard® Exclusive:\nFestive HUAT Package`,
             `Adult Package includes:
-                One (1) Universal Studios Singapore Adult (Ages 13 and above) Dated One-Day Ticket
-                One (1) SGD10 Retail Voucher with no minimum spend^
-                One (1) SGD10 F&B Voucher with no minimum spend*
-                Mastercard Gift Redemption Voucher`,
+            One (1) Universal Studios Singapore Adult (Ages 13 and above) Dated One-Day Ticket
+            One (1) SGD10 Retail Voucher with no minimum spend
+            One (1) SGD10 F&B Voucher with no minimum spend
+            Mastercard Gift Redemption Voucher`,
             88,
             "N/A"
         ],
         [
-            `[SG Residents] Mastercard® Exclusive:\nUniversal Studios Singapore Jumbo Dessert Thrills Package`,
+            `[SG Residents] Mastercard® Exclusive:\nJumbo Dessert Thrills Package`,
             `Package includes:
-                One (1) Universal Studios Singapore Adult Dated One-Day Ticket
-                One (1) High Tea + Jumbo Dessert Redemption Voucher for 2 pax*^
-                Mastercard Gift Redemption Voucher`,
+            One (1) Universal Studios Singapore Adult Dated One-Day Ticket
+            One (1) High Tea + Jumbo Dessert Redemption Voucher for 2 pax*^
+            Mastercard Gift Redemption Voucher`,
             100,
             "N/A"
         ],
         [
-            `[Non-Residents] Universal Studios Singapore One-Day Ticket`,
+            `[Non-Residents] One-Day Ticket`,
             `Adult (Ages 13 and above) - SGD81 | Child (Ages 4-12) - SGD61`,
             81,
             61
@@ -32,13 +32,46 @@ const pricings = {
     ],
     "SEA Aquarium": [
         [
-            "poopoo",
-            `Adult (Ages 13 and above) - SGD81 | Child (Ages 4-12) - SGD61`,
-            81,
-            61
+            "[SG Residents] Mastercard® Exclusive \nFun Package + Free Gift",
+            `Treat SGD20 Retail Voucher (Redeemable at Candylicious, Hershey’s Chocolate World Singapore,
+            Harry's Resorts World Sentosa and LEGO® Certified Store At Resorts World Sentosa)
+            Treat Mastercard Exclusive Gift`,
+            48,
+            "N/A"
         ],
+        [
+            "[SG Residents] Fun Package",
+            `Treat SGD20 Retail Voucher (Redeemable at Candylicious, Hershey’s Chocolate World Singapore, 
+            Harry's Resorts World Sentosa and LEGO® Certified Store At Resorts World Sentosa)
+            Treat Free set of Eutopia Quest adventure map for Child only`,
+            38,
+            "N/A"
+        ]
     ],
-    "Adventure Cove Waterpark": []
+    "Adventure Cove Waterpark": [
+        [
+            "[SG Residents] Morning Splash",
+            `Timing 9am to 1pm 
+            Treat FREE breakfast snack pack`,
+            25,
+            "N/A"
+        ],
+        [
+            "[SG Residents] Afternoon Splash",
+            `Timing 2pm to 6pm
+            Treat FREE ice-cream snack pack`,
+            25,
+            "N/A"
+        ],
+        [
+            "Adventure Express (One-Day Ticket Required)",
+            `Skip the regular lines at participating attractions with Adventure Express! Dated ticket for single use.
+            Starts from SGD15
+            Applicable for Adventure River, Bluwater Bay, Riptide Rocket, Rainbow Reef and Dueling Racer.`,
+            15,
+            "N/A"
+        ]
+    ]
 }
 
 const tableClasses = {
@@ -74,7 +107,7 @@ export const QinGuan = {
                     </button>
                 </div>
 
-                <grid-card>
+                <v-grid-card>
                     <div>
                         <span class="font-bold text-violet-800 uppercase font-display">featured attraction</span>
                         <h2 class="mt-3 text-3xl font-medium font-semibold text-orange-700 font-display">
@@ -87,11 +120,11 @@ export const QinGuan = {
                     </div>
                     <div class="w-full h-64 bg-center bg-cover rounded-lg shadow-lg md:col-span-2 md:h-80"
                          style="background-image: url('images/globe.jpg')"></div>
-                </grid-card>
+                </v-grid-card>
 
                 <hr class="my-10"/>
 
-                <grid-card>
+                <v-grid-card>
                     <div class="w-full h-64 bg-center bg-cover rounded-lg shadow-lg md:col-span-2 md:h-80"
                          style="background-image: url('images/sea.jpg')"></div>
                     <div>
@@ -106,11 +139,11 @@ export const QinGuan = {
                             marine life experience you won’t forget.
                         </p>
                     </div>
-                </grid-card>
+                </v-grid-card>
 
                 <hr class="my-10"/>
 
-                <grid-card>
+                <v-grid-card>
                     <div class="w-full h-64 bg-center bg-cover rounded-lg shadow-lg md:col-span-2 md:h-80"
                          style="background-image: url('images/cove.jpg')"></div>
                     <div>
@@ -127,36 +160,45 @@ export const QinGuan = {
                             ready!
                         </p>
                     </div>
-                </grid-card>
+                </v-grid-card>
 
                 <div id="form"></div>
                 <hr class="my-10"/>
 
                 <div class="h-[1000px]">
                     <v-card :fluid="true">
-                        <div class="p-4 bg-orange-400">
+                        <div class="p-4 bg-gradient-to-br from-orange-400 to-yellow-500">
                             <h5 class="mb-4 text-2xl font-semibold tracking-tight text-gray-900 font-display dark:text-white">
                                 Book an attraction now
                             </h5>
-                            <div class="grid flex-1 grid-cols-1 gap-6 mb-6 md:mr-6 md:mb-0 md:grid-cols-2">
+                            <div class="grid flex-1 grid-cols-1 gap-6 md:grid-cols-2 font-body">
                                 <v-input
                                         v-model="form.date"
                                         type="date"
-                                        label="Select a date"
+                                        label="I'm going on"
                                         :min="new Date().toISOString().split('T')[0]"
                                 />
                                 <v-select
                                         v-model="form.attraction"
-                                        title="Select an attraction"
+                                        title="I want to buy tickets for"
                                         :options="attractionNames"
                                 />
                             </div>
                         </div>
 
-                        <div class="mt-6 overflow-x-scroll bg-orange-300">
+                        <div class="overflow-x-scroll font-body">
                             <table class="w-full">
-                                <thead class="bg-gray-50 dark:bg-gray-700">
+                                <thead class="bg-orange-100 dark:bg-gray-700">
                                 <tr>
+                                    <th>
+                                        <div class="p-4">
+                                            <input type="checkbox"
+                                                   :checked="selectedAll"
+                                                   @change="selectAll"
+                                            >
+                                        </div>
+                                    </th>
+
                                     <th v-for="item in header"
                                         scope="col"
                                         :class="tableClasses['th']"
@@ -166,11 +208,22 @@ export const QinGuan = {
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr v-for="item in attraction"
-                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                    <td v-for="(text, idx) in item"
-                                        :class="idx === 0 ? tableClasses['td-bold'] : tableClasses['td']">
-                                        {{ text }}
+                                <tr v-for="(item, idx) in attraction"
+                                    class="bg-orange-50 border-b dark:bg-gray-800 dark:border-gray-700">
+                                    <th>
+                                        <div class="p-4">
+                                            <input type="checkbox"
+                                                   :value="item[0]"
+                                                   v-model="selected[idx]"
+                                            >
+                                        </div>
+                                    </th>
+
+                                    <td v-for="(text, idx2) in item"
+                                        :class="idx2 === 0 ? tableClasses['td-bold'] : tableClasses['td']">
+                                        <span>
+                                            {{ text }}
+                                        </span>
                                     </td>
                                 </tr>
                                 </tbody>
@@ -190,21 +243,42 @@ export const QinGuan = {
         })
         const attraction = computed(() => pricings[form.attraction])
 
+        const selected = ref([])
+        const selectedAll = computed(() => selected.value.length === attraction.value.length && selected.value.every(i => i))
+
+        const select = (idx) => selected.push(idx)
+        const toBooking = () => {
+            window.location.href = "#form"
+        }
+        const selectAll = () => {
+            const c = []
+            for (let idx = 0; idx < attraction.value.length; idx++) {
+                c[idx] = !selectedAll.value
+            }
+            selected.value = c
+        }
+
+        watch(() => form.attraction, () => {
+            selected.value = []
+        })
+
         return {
+            selectedAll,
             attractionNames,
-            tableClasses,
             attraction,
+            selected,
             pricings,
-            header,
             form,
+
+            header,
+            tableClasses,
+
+            select,
+            toBooking,
+            selectAll
         }
     },
-    methods: {
-        toBooking() {
-            window.location.href = "#form"
-        },
-    },
     components: {
-        'grid-card': GridCard
+        'v-grid-card': GridCard
     }
 }

@@ -8,7 +8,7 @@ export const Header = {
         <div class="flex fixed top-0 z-10 items-center px-3 w-full h-14 rounded-br-lg rounded-bl-lg bg-slate-200 font-body">
             <div class="container mx-auto">
                 <a :href="href">
-                    <span class="text-lg font-bold">{{ title ?? "Assignment" }}</span>
+                    <span class="text-lg font-bold hover:underline">{{ title ?? "Assignment" }}</span>
                 </a>
             </div>
         </div>
