@@ -15,7 +15,8 @@ const items = [
     },
     {
         title: "Art Science Museum",
-        href: "yun-e"
+        href: "yun-e",
+        img: "yun-e/images/artsciencemuseum.jpg"
     },
     {
         title: "Wild Wild Wet",

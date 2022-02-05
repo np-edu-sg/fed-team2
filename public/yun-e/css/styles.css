@@ -271,8 +271,7 @@ form {
     padding-left: 30px;
     padding-bottom: 30px;
     padding-right: 30px;
-    
-    height: 350px;
+    min-height: 350px;
 }
 
 .ticket-label {
@@ -376,7 +375,8 @@ input[type=reset] {
     padding-left: 10px;
     padding-right: 10px;
     background-color: #346f75;
-    border-radius: 7px;color: white;
+    border-radius: 7px;
+    color: white;
 }
 
 .final-message {
