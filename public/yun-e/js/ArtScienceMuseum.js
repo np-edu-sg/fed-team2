@@ -93,7 +93,7 @@
     }
     else {
         let total = quantity * price;
-        document.getElementById('number-of-tickets').innerHTML = quantity + " " + selected_ticket + " at $" + total;
+        document.getElementById('number-of-tickets').innerHTML = quantity + " " + selected_ticket + " at $" + total.toFixed(2);
     }
     
     document.getElementById('event-name').innerHTML = eventName;
@@ -105,4 +105,10 @@
         document.getElementById('ticket-pic').src = pic.replace('90x90', '225x225');
         document.getElementById("event-date").innerHTML = "Scheduled for " + date.toString();
     }    
+}
+
+function showFinalMessage() {
+    let name = document.getElementById("Name").value;
+    console.log(name);
+    document.getElementById("finalmsg").innerText= "Thank you for your order, " + name + "!";
 }
