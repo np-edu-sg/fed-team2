@@ -12,14 +12,15 @@ h1 {
     text-align: center;
     margin: auto;
     font-weight: bold;
-    padding-top: 10px;
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Roboto Slab', serif;
+    padding: 10px;
+    background-color: white;
+    border: thin solid black;
+    font-family: 'Catamaran', sans-serif;
 }
 
 h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: bold;
     margin: auto;
 }
 
