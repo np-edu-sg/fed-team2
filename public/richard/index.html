@@ -11,7 +11,7 @@
     <script src="js/form.js"></script>
 </head>
 
-<body class="bg-blue-900">
+<body class="bg-blue-900" id="body">
 <div id="header"></div>
 <section class="relative bg-blue-300 intro">
     <div class="container mx-auto absolute top-[30%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center">
@@ -163,32 +163,70 @@
         </li>
     </ul>
 </section>
-<section class="overlay-form noscroll" id="overlay-form-richard">
+<br>
+<table class="text-black border-collapse border border-white mx-auto bg-blue-300">
+    <thead>
+        <tr>
+            <th class="border border-black bg-blue-400 p-10">CATEGORY</th>
+            <th class="border border-black bg-blue-400 p-10">OFF-PEAK<br>(WEEKDAYS, EXCEPT GAZETTED SCHOOL & PUBLIC HOLIDAYS)</th>
+            <th class="border border-black bg-blue-400 p-10">PEAK<br>(SATURDAY, SUNDAY & GAZETTED SCHOOL & PUBLIC HOLIDAYS)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="border border-black p-5">Adult (13 yrs & above)</td>
+            <td class="border border-black p-5">Public: $26<br>NTUC Union Member: Enjoy 30% OFF*</td>
+            <td class="border border-black p-5">Public: $35<br>NTUC Union Member: Enjoy 30% OFF*</td>
+        </tr>
+        <tr>
+            <td class="border border-black p-5">Child (3 - 12 yrs)<br>Senior Citizen (55 years old & above)<br>nEBO member</td>
+            <td class="border border-black p-5">Public: $19<br>NTUC Union Member: Enjoy 30% OFF*</td>
+            <td class="border border-black p-5">Public: $26<br>NTUC Union Member: Enjoy 30% OFF*</td>
+        </tr>
+        <tr>
+            <td class="border border-black p-5">U Live Member^<br>Pioneer & Merdeka Generation^<br>Toddler (Below 3 yrs old)</td>
+            <td class="border border-black p-5">Free</td>
+            <td class="border border-black p-5">Free</td>
+        </tr>
+        <tr>
+            <td class="border border-black p-5">Family Package<br>(2 Adults & 2 Children)</td>
+            <td class="border border-black p-5">Public: $80</td>
+            <td class="border border-black p-5">Public: $112</td>
+        </tr>
+    </tbody>
+</table>
+<div class="m-10">
+    <button class="uppercase center" onclick="toggleForm(); goForm()">Book Now</button>
+</div>
+<form class="overlay-form" id="overlay-form-richard" onsubmit="displayFinal(); return false;" onreset="resetForm()">
     <div class="close-btn" onclick="toggleForm()">&times;</div>
     <h1 class="uppercase">Book Day Pass Ticket</h1>
     <div class="form-element">
         <label for="firstname">First Name</label>
-        <input type="text" id="firstname">
+        <input type="text" id="firstname" class="text-white" required>
     </div>
     <div class="form-element">
         <label for="lastname">Last Name</label>
-        <input type="text" id="lastname">
+        <input type="text" id="lastname" class="text-white" required>
     </div>
     <div class="form-element">
         <label for="email">Email</label>
-        <input type="email" id="email">
+        <input type="email" id="email" class="text-white" required>
     </div>
     <div class="form-element">
         <label for="date">Date</label>
-        <input type="date" id="date">
+        <input type="date" id="date" class="text-white" required>
     </div>
     <div class="form-element">
         <label for="quantity">Quantity</label>
-        <input type="number" id="quantity" value="1">
+        <input type="number" id="quantity" value="1" class="text-white" required>
     </div>
     <button type="submit">submit</button>
-</section>
-<button class="uppercase center" onclick="toggleForm()">Book Now</button>
+    <button type="reset">reset</button>
+    <br>
+    <br>
+    <p class="text-white" id="finalMessage"></p>
+</form>
 <div id="footer"></div>
 </body>
 <script src="js/animations.js"></script>
