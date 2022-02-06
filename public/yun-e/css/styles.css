@@ -398,6 +398,10 @@ input[type=reset]:hover {
     background-color: #b0d5d6;
 }
 
+.booking-form {
+    min-height: 958px;
+}
+
 .footer-position {
     bottom: 0;
     min-width: 100%;
