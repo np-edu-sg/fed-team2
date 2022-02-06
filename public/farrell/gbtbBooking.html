@@ -30,25 +30,25 @@
                        required>
                 <br>
                 <label for="customer_email" class="inline-block w-32 customer_email">Email:</label>
-                <input id="customer_email" type="email" placeholder="Enter Your Email"
+                <input id="customer_email" type="email" placeholder="example@gmail.com"
                        class="mb-3 border border-black"
                        required>
                 <br>
                 <label for="customer_contact_no" class="inline-block w-32 customer_contact_no">Contact
                     Number:</label>
-                <input id="customer_contact_no" type="text" placeholder="Enter Your Contact No."
-                       class="mb-3 border border-black" required>
+                <input id="customer_contact_no" type="text" placeholder="(Eg. +65 9000000)"
+                       class="mb-3 border border-black" pattern="[+][\d\s]+" required>
                 <br>
                 <label for="customer_street_no" class="inline-block w-32 customer_street_no">Street Number:</label>
                 <input id="customer_street_no" type="text" placeholder="Enter Your Street No."
-                       class="mb-3 border border-black" pattern="[\d\s]{1,}" required>
+                       class="mb-3 border border-black" pattern="[\d]{1,}" required>
                 <label for="customer_street_name" class="inline-block w-32 md:w-24 customer_street_name">Street
                     Name:</label>
                 <input id="customer_street_name" type="text" placeholder="Enter Your Street Name"
                        class="mb-3 border border-black" pattern="[A-Za-z\s]+" required>
                 <br>
                 <label for="customer_unit_no" class="inline-block w-32 customer_unit_no">Unit Number:</label>
-                <input id="customer_unit_no" type="text" placeholder="Enter Your Unit No."
+                <input id="customer_unit_no" type="text" placeholder="Eg. #02-01"
                        class="mb-3 border border-black" pattern="#\d+-\d+">
                 <label for="customer_postal_code" class="inline-block w-32 md:w-24 customer_postal_code">Postal
                     Code:</label>

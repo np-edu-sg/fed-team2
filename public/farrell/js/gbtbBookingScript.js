@@ -45,7 +45,7 @@ function showFinalMessage() {
     let name = document.getElementById("customer_name").value
     let email = document.getElementById("customer_email").value
     let booking_date = document.getElementById("book-date").value
-    document.getElementById("submission").innerText = "Thank you for your order, " + name + ". We will send you the ticket codes to your email at " + email +"."
+    document.getElementById("submission").innerText = "Thank you for your order, " + name + "! We will send you the ticket codes to your email at " + email +"."
     document.getElementById("booking_type").innerText = "Booked Ticket: " + data_array[5]
     document.getElementById("booking_date").innerText = "Booking Date: " + booking_date
     document.getElementById("price").innerText = "Total Price = " + data_array[1] + " * $" + data_array[2].toFixed(2)
