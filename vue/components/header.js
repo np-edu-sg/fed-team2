@@ -7,7 +7,7 @@ export const Header = {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
               rel="stylesheet">
-        <div :class="'fixed top-0 z-10 px-3 w-full shadow-md bg-slate-200 duration-200 font-body ' + (expanded ? 'h-96' : 'h-16')">
+        <div :class="'fixed top-0 z-[9999999999] px-3 w-full shadow-md bg-slate-200 duration-200 font-body ' + (expanded ? 'h-96' : 'h-16')">
             <div class="container mx-auto flex justify-between items-center mt-3">
                 <a :href="href">
                     <span class="text-lg font-bold font-display hover:underline">{{ title ?? "Tourism@SG" }}</span>
