@@ -9,9 +9,8 @@
 }
 
 body {
-    min-height: 1500px;
     font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    min-width: 600px;
+    min-height: 100%;
 }
 
 /*banner*/
@@ -256,8 +255,19 @@ table {
 }
 
 /*Booking form*/
+.booking {
+    text-align: center;
+    padding: 20px;
+    font-size: x-large;
+    color: #49adc4;
+}
+
+.booking-form {
+    min-height: 100%;
+}
+
 .booking-heading {
-    background: linear-gradient(to top, #b0d5d6, transparent);
+    background: linear-gradient(to top, transparent, white);
     padding-left: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -271,7 +281,7 @@ form {
     padding-left: 30px;
     padding-bottom: 30px;
     padding-right: 30px;
-    min-height: 350px;
+    min-height: 100%;
 }
 
 .ticket-label {
@@ -325,12 +335,10 @@ input[type=number] {
 
 .col-1-formatting {
     padding-left: 40px;
-    background-color: #b0d5d6;
 }
 
 .col-2-formatting {
     padding-right: 40px;
-    background-color: #b0d5d6;
 }
 
 label {
@@ -394,4 +402,18 @@ input[type=reset]:hover {
     color: #043e44;
     font-weight: 600;
     padding-bottom: 20px;
+}
+
+.header-bg {
+    background-color: white;
+}
+
+.body-form {
+    background-color: #b0d5d6;
+}
+
+.footer-position {
+    position: absolute;
+    bottom: 0;
+    min-width: 100%;
 }
