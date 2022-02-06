@@ -44,12 +44,12 @@ form {
     margin: auto;
     padding: 20px;
     background-color: mintcream;
-    
+
 }
 
-    form h1 {
-        padding: 20px;
-    }
+form h1 {
+    padding: 20px;
+}
 
 fieldset {
     border: thin solid black;
@@ -84,10 +84,10 @@ th {
     background-color: mintcream;
 }
 
-    th.roomHead {
-        font-size: large;
-        background-color: mistyrose;
-    }
+th.roomHead {
+    font-size: large;
+    background-color: mistyrose;
+}
 
 td {
     text-align: center;
@@ -115,3 +115,19 @@ tr, th, td {
     font-weight: bold;
 }
 
+nav {
+    background-color: #E2E8F0;
+}
+
+nav > .container-fluid > a {
+    font-family: Poppins;
+    font-weight: bold;
+}
+
+nav #navbar a {
+    font-family: IBM Plex Sans;
+}
+
+nav #navbar a:hover {
+    text-decoration: underline !important;
+}
