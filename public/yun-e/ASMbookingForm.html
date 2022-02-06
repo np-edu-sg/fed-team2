@@ -64,7 +64,7 @@
                        required/><br/>
 
                 <label class="ticket-label">Contact number: </label>
-                <input name="number" type="text" id="Number" onchange="option()" placeholder="Enter your contact number"
+                <input name="number" pattern="^[689]\d{7}" type="text" id="Number" onchange="option()" placeholder="Enter your contact number"
                        required/><br/><br/>
 
                 <input type="submit">
@@ -80,7 +80,9 @@
             <p id="event-date" class="ticket-date-display"></p>
         </div>
         <h3 id="finalmsg" class="final-message"></h3>
+        
     </div>
+    <a class="hover:text-blue-400 hover:underline booking" id="return-page" href="index.html">Return to the Main Page</a>
 </section>
 <div id="footer" class="footer-position"></div>
 </body>
