@@ -10,7 +10,7 @@ const links = {
         "https://www.personaldreamer.com/it/articolo/al-gardens-by-the-bay-di-singapore-tra-giardini-mirabolanti-e-alberi-giganti",
         "https://www.pinterest.com/pin/236368680413505608/",
         "https://www.w3docs.com/snippets/css/how-to-create-an-image-slider-or-slideshow.html#slide-2"],
-    "Qin Guan": ["i am a reference"],
+    "Qin Guan": ["https://rwsentosa.com"],
     "Yun-E": [
         "https://i2.wp.com/www.agoda.com/wp-content/uploads/2019/07/ArtSciene-Museum-ArtScience-Museum-building.jpg",
         "https://www.marinabaysands.com/museum/ticket.html",
@@ -43,6 +43,7 @@ export const Credits = {
                         <ul>
                             <li v-for="link in value">
                                 <a :href="link"
+                                   target="_blank"
                                    class="link hover:underline text-slate-500 hover:text-slate-900 font-body">
                                     {{ link }}
                                 </a>

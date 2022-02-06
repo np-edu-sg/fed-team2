@@ -263,3 +263,4 @@ export const QinGuan = {
 }
 
 export * from "./cart.js"
+export * from "./bookings.js"

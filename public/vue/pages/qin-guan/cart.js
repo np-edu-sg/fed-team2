@@ -128,7 +128,8 @@ export const Cart = {
 
                                 <div class="grid grid-cols-1 gap-4 mt-4 md:grid-cols-2">
                                     <v-input label="Email" v-model="personalInfo.email" type="email"></v-input>
-                                    <v-input label="Phone" v-model="personalInfo.phone" type="tel"></v-input>
+                                    <v-input label="Phone number" v-model="personalInfo.phone"
+                                             pattern="[\\d\\+ ]+"></v-input>
 
                                     <v-input label="Address" v-model="personalInfo.address"></v-input>
                                 </div>
@@ -152,8 +153,7 @@ export const Cart = {
              *  1: Orders overview
              *  2: Personal Info
              */
-            // doesnt work when cleared localstorage
-            const section = ref(parseInt(localStorage.getItem("temp_section")) ?? 1)
+            const section = ref(parseInt(localStorage.getItem("temp_section") ?? 1))
             const personalInfo = ref(JSON.parse(localStorage.getItem("temp_personal_info")) ?? {
                 name: "",
                 email: "",
@@ -182,6 +182,11 @@ export const Cart = {
                 localStorage.setItem("temp_personal_info", JSON.stringify(personalInfo.value))
             }, {deep: true})
 
+            const toOrderOverview = () => section.value = 1
+            const toPersonalInfo = () => section.value = 2
+
+            const toHomepage = () => window.location.href = 'index.html'
+
             const reset = () => {
                 for (const ticket of orders.value.tickets) {
                     ticket.count.adult = 1;
@@ -193,20 +198,23 @@ export const Cart = {
             }
 
             const submitOrder = () => {
+                const bookings = JSON.parse(localStorage.getItem("bookings") ?? "[]")
+                bookings.push({
+                    total: total.value,
+                    personalInfo: personalInfo.value,
+                    orders: orders.value
+                })
 
+                localStorage.setItem("bookings", JSON.stringify(bookings))
+                window.location.href = "bookings.html"
             }
+
 
             const resetOrder = () => {
                 for (const key in personalInfo.value) {
                     personalInfo.value[key] = ""
                 }
             }
-
-            const toOrderOverview = () => section.value = 1
-            const toPersonalInfo = () => section.value = 2
-
-            const toHomepage = () => window.location.href = 'index.html'
-
             return {
                 orders,
                 total,

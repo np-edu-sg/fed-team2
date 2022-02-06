@@ -2,7 +2,7 @@ import {createApp} from "https://unpkg.com/vue@3.2.29/dist/vue.esm-browser.prod.
 import "./tailwind.js"
 
 import {Landing} from "./pages/landing.js";
-import {Cart, QinGuan} from "./pages/qin-guan/index.js";
+import {Bookings, Cart, QinGuan} from "./pages/qin-guan/index.js";
 import {Credits} from "./pages/credits.js";
 
 import {Button, Card, Footer, Header, Input, Label, Select} from "./components/index.js";
@@ -54,4 +54,9 @@ if (qinguan) {
 const cart = document.getElementById("cart")
 if (cart) {
     app(Cart).mount("#cart")
+}
+
+const bookings = document.getElementById("bookings")
+if (bookings) {
+    app(Bookings).mount("#bookings")
 }
