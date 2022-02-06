@@ -21,7 +21,8 @@ const items = [
     },
     {
         title: "Wild Wild Wet",
-        href: "richard/img/wildwildwethpphoto.png"
+        href: "richard",
+        img: "richard/img/wildwildwethpphoto.png"
     },
 ]
 
