@@ -188,14 +188,14 @@
     </thead>
     <tbody>
         <tr>
-            <td class="border border-black p-5">    Adult (13 yrs & above)</td>
-            <td class="border border-black p-5">Public: $26<br>NTUC Union Member: Enjoy 30% OFF*</td>
-            <td class="border border-black p-5">Public: $35<br>NTUC Union Member: Enjoy 30% OFF*</td>
+            <td class="border border-black p-5">Adult (13 yrs & above)</td>
+            <td class="border border-black p-5">Public: $26</td>
+            <td class="border border-black p-5">Public: $35</td>
         </tr>
         <tr>
             <td class="border border-black p-5">Child (3 - 12 yrs)<br>Senior Citizen (55 years old & above)<br>nEBO member</td>
-            <td class="border border-black p-5">Public: $19<br>NTUC Union Member: Enjoy 30% OFF*</td>
-            <td class="border border-black p-5">Public: $26<br>NTUC Union Member: Enjoy 30% OFF*</td>
+            <td class="border border-black p-5">Public: $19</td>
+            <td class="border border-black p-5">Public: $26</td>
         </tr>
         <tr>
             <td class="border border-black p-5">U Live Member^<br>Pioneer & Merdeka Generation^<br>Toddler (Below 3 yrs old)</td>
@@ -229,13 +229,37 @@
     </div>
     <div class="form-element">
         <label for="date">Date</label>
-        <input type="date" id="date" class="text-white" required>
+        <input type="date" id="date" class="text-white" onchange="setPrice(); calcForm()" required>
     </div>
     <div class="form-element">
-        <label for="adultNo" class="tickets-label">Adult Ticket: </label>
-        <input type="number" id="adultNo" class="text-white tickets-input">
-        <label for="childNo" class="tickets-label">Child Ticket: </label>
-        <input type="number" id="childNo" class="text-white tickets-input">
+        <table class="text-white">
+            <thead>
+                <tr>
+                    <th>TICKET NAME</th>
+                    <th>PRICE</th>
+                    <th>QUANTITY</th>
+                    <th>TOTAL COST</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="p-5"><label for="adultNo">Adult (13 yrs & above)</label></td>
+                    <td class="p-5" id="priceAdult">Please Choose A Date To See The Price</td>
+                    <td class="p-5"><input type="number" id="adultNo" min="0" class="text-white tickets-input" onchange="calcForm()" value="0"></td>
+                    <td class="p-5" rowspan="4" id="totalPrice">Total Price</td>
+                </tr>
+                <tr>
+                    <td class="p-5"><label for="discNo">Child (3 - 12 yrs)<br>Senior Citizen (55 years old & above)<br>nEBO member</label></td>
+                    <td class="p-5" id="priceDisc">Please Choose A Date To See The Price</td>
+                    <td class="p-5"><input type="number" id="discNo" min="0" class="text-white tickets-input" onchange="calcForm()" value="0"></td>
+                </tr>
+                <tr>
+                    <td class="p-5"><label for="familyNo">Family Package<br>(2 Adults & 2 Children)</label></td>
+                    <td class="p-5" id="priceFamily">Please Choose A Date To See The Price</td>
+                    <td class="p-5"><input type="number" id="familyNo" min="0" class="text-white tickets-input" onchange="calcForm()" value="0"></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <div class="form-element">
     </div>
@@ -243,7 +267,7 @@
     <button type="reset">reset</button>
     <br>
     <br>
-    <p class="text-white" id="finalMessage"></p>
+    <p class="text-white finalMessage" id="finalMessage"></p>
 </form>
 <div id="footer"></div>
 </body>
