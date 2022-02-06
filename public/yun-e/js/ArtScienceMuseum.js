@@ -99,6 +99,7 @@
 
     } else {
         document.getElementById('ticket-display').style.display = 'block';
+        document.getElementById('footer').style.position = 'relative';
         document.getElementById('ticket-pic').src = pic.replace('90x90', '225x225');
         document.getElementById("event-date").innerHTML = "Scheduled for " + date.toString();
     }
