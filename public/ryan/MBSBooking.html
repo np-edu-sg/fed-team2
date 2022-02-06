@@ -15,8 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap" rel="stylesheet">
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!--AOS-->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -28,6 +26,7 @@
     <script src="https://www.w3schools.com/lib/w3.js"></script>
     <script src="../vue/index.web-components.js" type="module"></script> <!--Header/Footer-->
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!--AOS-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!--AOS-->
 
 </head>
@@ -54,9 +53,9 @@
 
     <br />
 
-    <div data-aos="zoom-in-up" class="row">
-        <div class="col-md-1.5"></div>
-        <div class="col-md-9">
+    <div data-aos="zoom-in-up" class="container-fluid">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
             <form onchange="getDetails()" onsubmit="submitForm(); return false">
                 <h1>Book Your Room</h1>
 
@@ -205,7 +204,7 @@
 
             </form>
         </div>
-        <div class="col-md-1.5"></div>
+        <div class="col-md-2"></div>
     </div>
     <br />
     <v-footer></v-footer>

@@ -46,13 +46,6 @@ h2 {
 
 }
 
-.carousel-inner img {
-    display: block;
-    max-width: 70%;
-    height: auto;
-    margin: auto;
-}
-
 .carousel-control-prev {
     background-color: lightgray;
 }
@@ -68,6 +61,13 @@ h2 {
     margin: auto;
     padding-top: 10px;
     padding-bottom: 20px;
+}
+
+.carousel-inner img {
+    display: block;
+    max-width: 70%;
+    height: auto;
+    margin: auto;
 }
 
 p.back {
