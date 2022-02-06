@@ -230,6 +230,7 @@ export const QinGuan = {
                 tickets,
             }
             localStorage.setItem("temp", JSON.stringify(temp))
+            localStorage.setItem("temp_section", "1")
             window.location.href = "cart.html"
         }
 
