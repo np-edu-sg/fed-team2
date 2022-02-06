@@ -152,6 +152,7 @@ export const Cart = {
              *  1: Orders overview
              *  2: Personal Info
              */
+            // doesnt work when cleared localstorage
             const section = ref(parseInt(localStorage.getItem("temp_section")) ?? 1)
             const personalInfo = ref(JSON.parse(localStorage.getItem("temp_personal_info")) ?? {
                 name: "",

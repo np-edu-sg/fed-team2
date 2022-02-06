@@ -18,35 +18,35 @@ export const Footer = {
             let prefix = "/"
             const h = window.location.href;
             if (h.indexOf("https://ngeeannpoly.gitlab.io") > -1) {
-                prefix = "https://ngeeannpoly.gitlab.io/fed/team2"
+                prefix = "https://ngeeannpoly.gitlab.io/fed/team2/"
             } else if (h.indexOf("/public") > -1) {
-                prefix = h.split("/public")[0] + "/public"
+                prefix = h.split("/public")[0] + "/public/"
             }
 
             return [
                 {
                     title: "Resorts World Sentosa",
-                    href: prefix + "/qin-guan",
+                    href: prefix + "qin-guan",
                 },
                 {
                     title: "Gardens by the Bay",
-                    href: prefix + "/farrell",
+                    href: prefix + "farrell",
                 },
                 {
                     title: "Marina Bay Sands",
-                    href: prefix + "/ryan"
+                    href: prefix + "ryan"
                 },
                 {
                     title: "Art Science Museum",
-                    href: prefix + "/yun-e"
+                    href: prefix + "yun-e"
                 },
                 {
                     title: "Wild Wild Wet",
-                    href: prefix + "/richard"
+                    href: prefix + "richard"
                 },
                 {
                     title: "Credits",
-                    href: prefix + "/credits.html"
+                    href: prefix + "credits.html"
                 }
             ]
         }
