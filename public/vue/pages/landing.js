@@ -36,7 +36,7 @@ export const Landing = {
                 <div class="grid grid-cols-1 gap-6 pt-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                     <v-card v-for="item in items" :animated="true">
                         <a :href="item.href">
-                            <img class="rounded-t-lg aspect-video" :src="item.img" alt="Your image here" />
+                            <img class="rounded-t-lg aspect-video" :src="item.img" alt="Your image here"/>
                         </a>
                         <div class="p-5">
                             <a :href="item.href">
@@ -57,5 +57,7 @@ export const Landing = {
             <v-footer></v-footer>
         </div>
     `,
-    data: () => ({items})
+    setup() {
+        return {items}
+    }
 }
