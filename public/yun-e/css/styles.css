@@ -399,7 +399,6 @@ input[type=reset]:hover {
 }
 
 .footer-position {
-    position: absolute;
     bottom: 0;
     min-width: 100%;
 }
