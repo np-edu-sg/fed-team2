@@ -1,3 +1,4 @@
+<!--Navigation buttons for the navigation buttons and scroll to top button-->
 function flower_dome_button(){
     window.location.href = "#flower-dome"
 }
