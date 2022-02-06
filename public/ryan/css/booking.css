@@ -9,6 +9,8 @@ body
 
 h1 {
     text-align: center;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: bold;
 }
 
 p.back {
@@ -38,14 +40,11 @@ p.back {
 
 form {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border: solid black 3px;
-    border-radius: 20px;
+    border: thin dashed black;
+    border-radius: 30px;
     margin: auto;
     margin: auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 20px;
     background-color: mintcream;
 }
 
