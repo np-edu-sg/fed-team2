@@ -1,3 +1,5 @@
+<!--This js is only used in the booking form-->
+<!--Onload function to set the limit of 1 month booking in advance-->
 window.onload = function () {
     let currentdate = new Date();
     let futuredate = new Date();
@@ -11,10 +13,7 @@ window.onload = function () {
     input.setAttribute("min", currentdate);
     input.setAttribute("max", futuredate);
 }
-
-
-
-
+<!--Calculation of total price with usage of Objects and Arrays-->
 function bookingPrice() {
     let chosen_ticket;
     let total_price;
@@ -38,8 +37,7 @@ function bookingPrice() {
     data_array = [total_price, noOfAdults, chosen_ticket.AdultPrice, noOfChildren, chosen_ticket.ChildPrice, chosen_ticket.Name]
     return data_array
 }
-
-
+<!--Display of final message on submit, along with a scroll to scroll the page to the booking details-->
 function showFinalMessage() {
     let data_array = bookingPrice()
     let name = document.getElementById("customer_name").value
@@ -52,8 +50,7 @@ function showFinalMessage() {
         + " + " + data_array[3] + " * $" + data_array[4].toFixed(2) + " = $" + data_array[0].toFixed(2)
     window.location.href = "#submission"
 }
-
-
+<!--Clear message to clear out the extra text displayed and to scroll the form page back to the top-->
 function clearMessage() {
     document.getElementById("submission").innerText = "Submitted Form Details will be displayed here"
     document.getElementById("booking_type").innerText = ""
