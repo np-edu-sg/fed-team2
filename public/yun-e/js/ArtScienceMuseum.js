@@ -88,7 +88,7 @@
         quantity = ticketQuantity[i].value;
     }
     if (price === "Please choose a valid category") {
-        document.getElementById('number-of-tickets').innerHTML = "Please choose a valid category"
+        document.getElementById('number-of-tickets').innerHTML = price;
     } else {
         let total = quantity * price;
         document.getElementById('number-of-tickets').innerHTML = quantity + " " + selected_ticket + " at $" + total.toFixed(2);
@@ -111,4 +111,14 @@ function showFinalMessage() {
     let name = document.getElementById("Name").value;
     console.log(name);
     document.getElementById("finalmsg").innerText = "Thank you for your order, " + name + "!";
+}
+
+window.onload = function () {
+    let tD = new Date();
+    var today = tD.getFullYear() + "-" + (tD.getMonth() + 1) + "-" + tD.getDate();
+    document.getElementById("ticket-date").setAttribute("min", today);
+    var nD = new Date();
+    nD.setDate(nD.getDate() + 30);
+    var newdate = nD.getFullYear() + "-" + (nD.getMonth() + 1) + "-" + nD.getDate();
+    document.getElementById("ticket-date").setAttribute("max", nD.toISOString().split("T")[0]);
 }

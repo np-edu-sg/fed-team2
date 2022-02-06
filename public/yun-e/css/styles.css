@@ -9,7 +9,8 @@
 }
 
 body {
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", 
+    Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     min-height: 100%;
 }
 
@@ -46,18 +47,6 @@ body {
     filter: brightness(60%);
 }
 
-.banner header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 40px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 10000;
-}
-
 /*about the museum*/
 .about {
     position: relative;
@@ -72,7 +61,7 @@ body {
 }
 
 .about .contentBx {
-    background: #9bbbc3; /*change later*/
+    background: #9bbbc3; 
     padding: 60px;
 }
 
@@ -83,7 +72,7 @@ body {
 }
 
 .about .textBx {
-    background: #549db0; /*change later*/
+    background: #549db0;
     padding: 60px;
 }
 
@@ -136,9 +125,6 @@ body {
 
 .events .grid {
     grid-column-gap: 40px;
-}
-
-.grid-col-2 {
 }
 
 /*testing slideshow */
