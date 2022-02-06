@@ -49,10 +49,10 @@ export const QinGuan = {
                         Resorts
                         World<br/>Sentosa</h1>
                     <div class="flex">
-                        <v-button @click="toBooking">
+                        <v-button href="#form">
                             Book now
                         </v-button>
-                        <v-button color="alternative">
+                        <v-button color="alternative" href="bookings.html">
                             View bookings
                         </v-button>
                     </div>
@@ -213,9 +213,6 @@ export const QinGuan = {
 
         const select = (idx) => selected.push(idx)
         const cancel = () => selected.value = new Array(attraction.value.length).fill(false)
-        const toBooking = () => {
-            window.location.href = "#form"
-        }
         const selectAll = () => {
             selected.value = new Array(attraction.value.length).fill(!selectedAll.value)
         }
@@ -254,7 +251,6 @@ export const QinGuan = {
             select,
             cancel,
             cont,
-            toBooking,
             selectAll
         }
     },

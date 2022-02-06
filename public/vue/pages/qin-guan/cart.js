@@ -42,7 +42,7 @@ export const Cart = {
                             <span class="my-6 text-2xl font-body text-slate-500">
                                 Your cart is empty D:
                             </span>
-                            <v-button @click="toHomepage">Back to homepage</v-button>
+                            <v-button href="index.html">Back to homepage</v-button>
                         </div>
                         <form class="p-4" @reset.prevent="reset" @submit.prevent="toPersonalInfo" v-else>
                             <h2 class="text-2xl font-semibold text-orange-600 font-display">{{ orders.attraction }}</h2>
@@ -185,8 +185,6 @@ export const Cart = {
             const toOrderOverview = () => section.value = 1
             const toPersonalInfo = () => section.value = 2
 
-            const toHomepage = () => window.location.href = 'index.html'
-
             const reset = () => {
                 for (const ticket of orders.value.tickets) {
                     ticket.count.adult = 1;
@@ -227,7 +225,6 @@ export const Cart = {
                 resetOrder,
                 toOrderOverview,
                 toPersonalInfo,
-                toHomepage
             }
         } catch (e) {
             // Clear and redirect with error if there's weird issues loading temp data
