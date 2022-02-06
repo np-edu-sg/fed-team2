@@ -21,6 +21,14 @@ function displayFinal(){
     const noDisc = document.getElementById("discNo").value
     const noFamilyPack = document.getElementById("familyNo").value
     const totalNoTicket = parseInt(noAdult) + parseInt(noDisc) + parseInt(noFamilyPack)
+    document.getElementById("firstname").setAttribute("disabled","disable")
+    document.getElementById("lastname").setAttribute("disabled","disable")
+    document.getElementById("email").setAttribute("disabled","disable")
+    document.getElementById("date").setAttribute("disabled","disable")
+    document.getElementById("adultNo").setAttribute("disabled","disable")
+    document.getElementById("discNo").setAttribute("disabled","disable")
+    document.getElementById("familyNo").setAttribute("disabled","disable")
+    document.getElementById("submit").setAttribute("disabled","disable")
     if (date.getDay() == 0 || date.getDay() == 6) {
         const tAdultPrice = peakPrice["adult"] * noAdult
         const tDiscPrice = peakPrice["child"] * noDisc
@@ -39,6 +47,18 @@ function displayFinal(){
 
 function resetForm(){
     document.getElementById("finalMessage").innerHTML = ""
+    document.getElementById("priceAdult").innerHTML = "Please Choose A Date To See The Price"
+    document.getElementById("priceDisc").innerHTML = "Please Choose A Date To See The Price"
+    document.getElementById("priceFamily").innerHTML = "Please Choose A Date To See The Price"
+    document.getElementById("totalPrice").innerHTML = "Total Price"
+    document.getElementById("firstname").removeAttribute("disabled")
+    document.getElementById("lastname").removeAttribute("disabled")
+    document.getElementById("email").removeAttribute("disabled")
+    document.getElementById("date").removeAttribute("disabled")
+    document.getElementById("adultNo").removeAttribute("disabled")
+    document.getElementById("discNo").removeAttribute("disabled")
+    document.getElementById("familyNo").removeAttribute("disabled")
+    document.getElementById("submit").removeAttribute("disabled")
 }
 
 function setPrice(){
