@@ -10,7 +10,7 @@ export const Header = {
         <div :class="'fixed top-0 z-10 px-3 w-full shadow-md bg-slate-200 duration-200 font-body ' + (expanded ? 'h-96' : 'h-16')">
             <div class="container mx-auto flex justify-between items-center mt-2">
                 <a :href="href">
-                    <span class="text-lg font-bold hover:underline">{{ title ?? "Assignment" }}</span>
+                    <span class="text-lg font-bold hover:underline">{{ title ?? "Tourism@SG" }}</span>
                 </a>
 
                 <v-button color="alternative" @click="expanded = !expanded" class="bg-transparent mr-0 p-1!">
