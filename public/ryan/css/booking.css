@@ -43,9 +43,9 @@ form {
     border: thin dashed black;
     border-radius: 30px;
     margin: auto;
-    margin: auto;
     padding: 20px;
     background-color: mintcream;
+    
 }
 
     form h1 {
@@ -115,3 +115,4 @@ tr, th, td {
     display: inline;
     font-weight: bold;
 }
+
