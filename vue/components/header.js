@@ -47,10 +47,38 @@ export const Header = {
         const expanded = ref(false)
         const href = computed(() => {
             const h = window.location.href;
-            if (h.indexOf("https://ngeeannpoly.gitlab.io") > -1) return "https://ngeeannpoly.gitlab.io/fed/team2"
-            // Hacky, oh no
-            else if (h.indexOf("/public") > -1) return h.split("/public")[0] + "/public"
+            if (h.indexOf("https://ngeeannpoly.gitlab.io") > -1) return "https://ngeeannpoly.gitlab.io/fed/team2/"
+            if (h.indexOf("/Assignment") > -1) return h.split("/Assignment")[0] + "/Assignment/"
+            if (h.indexOf("/public") > -1) return h.split("/public")[0] + "/public/"
             return "/"
+        })
+        const items = computed(() => {
+            return [
+                {
+                    title: "Resorts World Sentosa",
+                    href: href.value + "qin-guan",
+                },
+                {
+                    title: "Gardens by the Bay",
+                    href: href.value + "farrell",
+                },
+                {
+                    title: "Marina Bay Sands",
+                    href: href.value + "ryan"
+                },
+                {
+                    title: "Art Science Museum",
+                    href: href.value + "yun-e"
+                },
+                {
+                    title: "Wild Wild Wet",
+                    href: href.value + "richard"
+                },
+                {
+                    title: "Credits",
+                    href: href.value + "credits.html"
+                }
+            ]
         })
 
         const sm = computed(() => width.value <= 1280)
@@ -68,47 +96,10 @@ export const Header = {
 
         return {
             sm,
-            width,
             href,
+            width,
+            items,
             expanded,
         }
     },
-    computed: {
-        items: () => {
-            let prefix = "/"
-            const h = window.location.href;
-            if (h.indexOf("https://ngeeannpoly.gitlab.io") > -1) {
-                prefix = "https://ngeeannpoly.gitlab.io/fed/team2/"
-            } else if (h.indexOf("/public") > -1) {
-                prefix = h.split("/public")[0] + "/public/"
-            }
-
-            return [
-                {
-                    title: "Resorts World Sentosa",
-                    href: prefix + "qin-guan",
-                },
-                {
-                    title: "Gardens by the Bay",
-                    href: prefix + "farrell",
-                },
-                {
-                    title: "Marina Bay Sands",
-                    href: prefix + "ryan"
-                },
-                {
-                    title: "Art Science Museum",
-                    href: prefix + "yun-e"
-                },
-                {
-                    title: "Wild Wild Wet",
-                    href: prefix + "richard"
-                },
-                {
-                    title: "Credits",
-                    href: prefix + "credits.html"
-                }
-            ]
-        }
-    }
 }

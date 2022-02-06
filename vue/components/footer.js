@@ -1,3 +1,5 @@
+import {computed, onBeforeUnmount, onMounted, ref} from "https://unpkg.com/vue@3.2.29/dist/vue.esm-browser.prod.js"
+
 export const Footer = {
     //language=HTML
     template: `
@@ -13,42 +15,43 @@ export const Footer = {
             </ul>
         </footer>
     `,
-    computed: {
-        items: () => {
-            let prefix = "/"
+    setup() {
+        const href = computed(() => {
             const h = window.location.href;
-            if (h.indexOf("https://ngeeannpoly.gitlab.io") > -1) {
-                prefix = "https://ngeeannpoly.gitlab.io/fed/team2/"
-            } else if (h.indexOf("/public") > -1) {
-                prefix = h.split("/public")[0] + "/public/"
-            }
-
+            if (h.indexOf("https://ngeeannpoly.gitlab.io") > -1) return "https://ngeeannpoly.gitlab.io/fed/team2/"
+            if (h.indexOf("/Assignment") > -1) return h.split("/Assignment")[0] + "/Assignment/"
+            if (h.indexOf("/public") > -1) return h.split("/public")[0] + "/public/"
+            return "/"
+        })
+        const items = computed(() => {
             return [
                 {
                     title: "Resorts World Sentosa",
-                    href: prefix + "qin-guan",
+                    href: href.value + "qin-guan",
                 },
                 {
                     title: "Gardens by the Bay",
-                    href: prefix + "farrell",
+                    href: href.value + "farrell",
                 },
                 {
                     title: "Marina Bay Sands",
-                    href: prefix + "ryan"
+                    href: href.value + "ryan"
                 },
                 {
                     title: "Art Science Museum",
-                    href: prefix + "yun-e"
+                    href: href.value + "yun-e"
                 },
                 {
                     title: "Wild Wild Wet",
-                    href: prefix + "richard"
+                    href: href.value + "richard"
                 },
                 {
                     title: "Credits",
-                    href: prefix + "credits.html"
+                    href: href.value + "credits.html"
                 }
             ]
-        }
+        })
+
+        return {items}
     }
 }
