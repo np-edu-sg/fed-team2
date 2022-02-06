@@ -142,9 +142,9 @@ img .pics{
 
 .overlay-form {
   position: absolute;
-  top: 50vh;
+  top: 100%;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 0;
   background: rgba(0,0,0,0.8);
   z-index: -1;
@@ -238,4 +238,12 @@ body.activeForm .overlay-form {
 
 ::-webkit-calendar-picker-indicator {
   filter: invert(1);
+}
+
+.overlay-form .tickets-input {
+  width: 70px;
+}
+
+.overlay-form .tickets-label {
+  display: inline-block;
 }
