@@ -24,6 +24,25 @@ export const QinGuan = {
         <div class="flex flex-col w-full">
             <v-header/>
             <div class="flex flex-col flex-1 p-3 md:pt-10 md:px-20 lg:px-32 xl:px-52">
+                <div class="p-4 mb-4 bg-red-100 rounded-lg dark:bg-red-200" role="alert" v-if="error">
+                    <div class="flex items-center">
+                        <svg class="mr-2 w-5 h-5 text-red-700 dark:text-red-800" fill="currentColor" viewBox="0 0 20 20"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                                  clip-rule="evenodd"></path>
+                        </svg>
+                        <h3 class="text-lg font-medium text-red-700 dark:text-red-800">An error occurred processing your
+                            order</h3>
+                    </div>
+                    <div class="mt-2 mb-4 text-sm text-red-700 dark:text-red-800">
+                        {{ error }}
+                    </div>
+                    <div class="flex">
+                        <v-button color="red" href="index.html">Dismiss</v-button>
+                    </div>
+                </div>
+
                 <div class="flex flex-col justify-center items-center p-6 mb-10 w-full h-96 bg-center bg-cover rounded-xl shadow-md bg-blend-darken sm:items-start bg-slate-600/75"
                      style="background-image: url('images/rws.jpg')">
                     <h1 class="text-5xl font-bold leading-normal text-center text-slate-200 sm:text-left font-display">
@@ -33,7 +52,7 @@ export const QinGuan = {
                         <v-button @click="toBooking">
                             Book now
                         </v-button>
-                        <v-button color="alternative" @click="cont">
+                        <v-button color="alternative">
                             View bookings
                         </v-button>
                     </div>
@@ -175,9 +194,15 @@ export const QinGuan = {
         </div>
     `,
     setup() {
+        let error = "";
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has("error")) {
+            error = urlParams.get("error")
+        }
+
         const attractionNames = computed(() => Object.keys(pricings))
         const form = reactive({
-            date: "",
+            date: new Date().toISOString().split('T')[0],
             attraction: attractionNames.value[0]
         })
         const attraction = computed(() => pricings[form.attraction])
@@ -194,11 +219,17 @@ export const QinGuan = {
         const selectAll = () => {
             selected.value = new Array(attraction.value.length).fill(!selectedAll.value)
         }
+
         const cont = () => {
-            localStorage.setItem("v", JSON.stringify({
-                attraction: form.attraction.value,
-                selected: selected.value
-            }))
+            const tickets = selected.value.map((v, idx) => {
+                if (!v) return undefined;
+                return {data: pricings[form.attraction][idx], count: {adult: 1, child: 0}}
+            }).filter(i => i)
+            const temp = {
+                ...form,
+                tickets,
+            }
+            localStorage.setItem("temp", JSON.stringify(temp))
             window.location.href = "cart.html"
         }
 
@@ -207,6 +238,7 @@ export const QinGuan = {
         })
 
         return {
+            error,
             attractionNames,
             attraction,
             selectedAll,
