@@ -10,7 +10,7 @@ export const Header = {
         <div :class="'fixed top-0 z-10 px-3 w-full shadow-md bg-slate-200 duration-200 font-body ' + (expanded ? 'h-96' : 'h-16')">
             <div class="container mx-auto flex justify-between items-center mt-2">
                 <a :href="href">
-                    <span class="text-lg font-bold hover:underline">{{ title ?? "Tourism@SG" }}</span>
+                    <span class="text-lg font-bold font-display hover:underline">{{ title ?? "Tourism@SG" }}</span>
                 </a>
 
                 <v-button color="alternative" @click="expanded = !expanded" class="bg-transparent mr-0 p-1!">
@@ -25,7 +25,7 @@ export const Header = {
                 </v-button>
             </div>
 
-            <div v-if="expanded" class="overflow-hidden divide-y divide-slate-600">
+            <div v-if="expanded" class="container mx-auto overflow-hidden divide-y divide-slate-600">
                 <div v-for="item in items" class="py-3">
                     <a :href="item.href" class="hover:underline">
                         {{ item.title }}
@@ -33,7 +33,7 @@ export const Header = {
                 </div>
             </div>
         </div>
-        <div :class="expanded ? 'mb-96' : 'mb-16'"></div>
+        <div class="mb-16"></div>
     `,
     props: ['title'],
     setup() {
